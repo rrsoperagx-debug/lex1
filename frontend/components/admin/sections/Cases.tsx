@@ -133,154 +133,174 @@ export const CasesSection: React.FC = () => {
 
   return (
     <>
-      <Card className="border-none shadow-md">
-        <CardHeader className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="glass-panel rounded-2xl border border-white/60 dark:border-white/10 shadow-lg p-6 relative overflow-hidden">
+        {/* Specular highlight border */}
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/70 dark:via-white/20 to-transparent pointer-events-none" />
+
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200/50 dark:border-white/5">
           <div>
-            <CardTitle>Zarządzanie Pismami i Sprawami</CardTitle>
-            <CardDescription>
-              Monitoruj status postępowań i zarządzaj dokumentacją klientów.
-            </CardDescription>
+            <div className="flex items-center gap-2">
+              <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+                Zarządzanie Pismami i Sprawami
+              </h2>
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+                {cases.length} pozycji
+              </span>
+            </div>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Monitoruj status postępowań sądowych i administracyjnych w czasie rzeczywistym.
+            </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <div className="relative">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-slate-500" />
+              <Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
               <Input
                 placeholder="Szukaj spraw..."
                 value={filter}
                 onChange={(e) => setFilter(e.target.value)}
-                className="pl-9 w-64 bg-slate-50 dark:bg-slate-900 border-none shadow-sm"
+                className="pl-9 w-64 h-9 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md rounded-xl border border-white/50 dark:border-white/10 text-xs shadow-inner"
               />
             </div>
             <Button
               type="button"
               onClick={() => setCreateOpen(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white gap-2"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white gap-2 rounded-xl shadow-md shadow-blue-500/25 h-9 px-4 text-xs font-semibold"
             >
-              <Plus className="h-4 w-4" /> Nowa Sprawa
+              <Plus className="h-3.5 w-3.5" /> Nowa Sprawa
             </Button>
           </div>
-        </CardHeader>
-        <CardContent>
+        </div>
+
+        <div className="pt-4">
           {loading ? (
-            <div className="space-y-4">
+            <div className="space-y-3">
               {Array.from({ length: 5 }).map((_, i) => (
                 <div
                   key={i}
-                  className="h-12 bg-slate-100 dark:bg-slate-900 animate-pulse rounded-lg"
+                  className="h-12 bg-white/30 dark:bg-slate-900/30 rounded-xl animate-pulse"
                 />
               ))}
             </div>
           ) : (
-            <Table>
-              <TableHeader>
-                <TableRow className="bg-slate-50/50 dark:bg-slate-900/50">
-                  <TableHead className="font-bold">Sprawa (Tytuł)</TableHead>
-                  <TableHead className="font-bold">Status</TableHead>
-                  <TableHead className="font-bold">Klient</TableHead>
-                  <TableHead className="font-bold">Dokumenty</TableHead>
-                  <TableHead className="font-bold">Data utworzenia</TableHead>
-                  <TableHead className="text-right font-bold">Akcje</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {filteredCases.length > 0 ? (
-                  filteredCases.map((c) => (
-                    <TableRow
-                      key={c.id}
-                      className="hover:bg-slate-50/50 dark:hover:bg-slate-900/50 transition-colors"
-                    >
-                      <TableCell>
-                        <div className="flex flex-col">
-                          <span className="font-bold">{c.title}</span>
-                          <span className="text-xs text-slate-500 line-clamp-1">
-                            {c.description || "Brak opisu"}
-                          </span>
-                        </div>
-                      </TableCell>
-                      <TableCell>
-                        <Badge
-                          className={
-                            c.status === "open"
-                              ? "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 border-none"
+            <div className="rounded-xl border border-slate-200/60 dark:border-white/5 overflow-hidden">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-slate-100/40 dark:bg-slate-900/40 backdrop-blur-md border-b border-slate-200/60 dark:border-white/5">
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Sprawa (Tytuł)</TableHead>
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Status</TableHead>
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Klient</TableHead>
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Dokumenty</TableHead>
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Data utworzenia</TableHead>
+                    <TableHead className="text-right font-bold text-xs uppercase tracking-wider text-slate-500">Akcje</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {filteredCases.length > 0 ? (
+                    filteredCases.map((c) => (
+                      <TableRow
+                        key={c.id}
+                        className="hover:bg-white/60 dark:hover:bg-white/5 transition-colors border-b border-slate-100/60 dark:border-white/5 last:border-0"
+                      >
+                        <TableCell>
+                          <div className="flex flex-col">
+                            <span className="font-bold text-slate-900 dark:text-slate-100">{c.title}</span>
+                            <span className="text-xs text-slate-500 line-clamp-1">
+                              {c.description || "Brak opisu"}
+                            </span>
+                          </div>
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold border ${
+                              c.status === "open"
+                                ? "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20"
+                                : c.status === "closed_success"
+                                  ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20"
+                                  : "bg-slate-500/10 text-slate-600 dark:text-slate-400 border-slate-500/20"
+                            }`}
+                          >
+                            <span className={`inline-block size-1.5 rounded-full mr-1.5 ${
+                              c.status === "open"
+                                ? "bg-blue-500"
+                                : c.status === "closed_success"
+                                  ? "bg-emerald-500"
+                                  : "bg-slate-400"
+                            }`} />
+                            {c.status === "open"
+                              ? "Otwarta"
                               : c.status === "closed_success"
-                                ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border-none"
-                                : "bg-slate-100 text-slate-700 dark:bg-slate-900/40 dark:text-slate-400 border-none"
-                          }
-                        >
-                          {c.status === "open"
-                            ? "Otwarta"
-                            : c.status === "closed_success"
-                              ? "Wygrana"
-                              : "Zakończona"}
-                        </Badge>
-                      </TableCell>
-                      <TableCell>
-                        <div className="flex items-center gap-2">
-                          <User className="h-3 w-3 text-slate-500" />
-                          <span className="text-xs">
-                            {c.client_name || `ID: ${c.user_id?.substring(0, 8)}`}
-                          </span>
-                        </div>
-                      </TableCell>
-                      <TableCell>
-                        <div className="flex items-center gap-1">
-                          <FileText className="h-3 w-3 text-slate-500" />
-                          <span className="text-xs font-medium">
-                            {c.documents?.length || 0} pism
-                          </span>
-                        </div>
-                      </TableCell>
-                      <TableCell className="text-slate-500 text-xs">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-3 w-3" />
-                          {new Date(c.created_at).toLocaleDateString("pl-PL")}
-                        </div>
-                      </TableCell>
-                      <TableCell className="text-right">
-                        <DropdownMenu>
-                          <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" size="icon">
-                              <MoreHorizontal className="h-4 w-4" />
-                            </Button>
-                          </DropdownMenuTrigger>
-                          <DropdownMenuContent align="end">
-                            <DropdownMenuLabel>Działania</DropdownMenuLabel>
-                            <DropdownMenuItem
-                              className="gap-2 cursor-pointer"
-                              onClick={() => setSelectedCase(c)}
-                            >
-                              <ExternalLink className="h-4 w-4" /> Otwórz sprawę
-                            </DropdownMenuItem>
-                            <DropdownMenuSeparator />
-                            <DropdownMenuItem
-                              className="gap-2 text-blue-600 font-medium cursor-pointer"
-                              onClick={() => handleCycleStatus(c)}
-                            >
-                              Zmień status
-                            </DropdownMenuItem>
-                          </DropdownMenuContent>
-                        </DropdownMenu>
+                                ? "Wygrana"
+                                : "Zakończona"}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>
+                          <div className="flex items-center gap-2">
+                            <User className="h-3.5 w-3.5 text-slate-400" />
+                            <span className="text-xs text-slate-700 dark:text-slate-300 font-medium">
+                              {c.client_name || `ID: ${c.user_id?.substring(0, 8)}`}
+                            </span>
+                          </div>
+                        </TableCell>
+                        <TableCell>
+                          <div className="flex items-center gap-1.5">
+                            <FileText className="h-3.5 w-3.5 text-slate-400" />
+                            <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                              {c.documents?.length || 0} pism
+                            </span>
+                          </div>
+                        </TableCell>
+                        <TableCell className="text-slate-500 text-xs font-mono">
+                          <div className="flex items-center gap-1.5">
+                            <Calendar className="h-3.5 w-3.5 text-slate-400" />
+                            {new Date(c.created_at).toLocaleDateString("pl-PL")}
+                          </div>
+                        </TableCell>
+                        <TableCell className="text-right">
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button variant="ghost" size="icon" className="rounded-xl hover:bg-white/60 dark:hover:bg-slate-800">
+                                <MoreHorizontal className="h-4 w-4" />
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end" className="glass-panel-elevated rounded-xl">
+                              <DropdownMenuLabel className="font-semibold text-xs">Działania</DropdownMenuLabel>
+                              <DropdownMenuItem
+                                className="gap-2 cursor-pointer text-xs"
+                                onClick={() => setSelectedCase(c)}
+                              >
+                                <ExternalLink className="h-3.5 w-3.5" /> Otwórz sprawę
+                              </DropdownMenuItem>
+                              <DropdownMenuSeparator className="bg-slate-200/50 dark:bg-white/10" />
+                              <DropdownMenuItem
+                                className="gap-2 text-blue-600 dark:text-blue-400 font-medium cursor-pointer text-xs"
+                                onClick={() => handleCycleStatus(c)}
+                              >
+                                Zmień status
+                              </DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </TableCell>
+                      </TableRow>
+                    ))
+                  ) : (
+                    <TableRow>
+                      <TableCell
+                        colSpan={6}
+                        className="text-center py-10 text-slate-500 italic"
+                      >
+                        Brak spraw do wyświetlenia.
                       </TableCell>
                     </TableRow>
-                  ))
-                ) : (
-                  <TableRow>
-                    <TableCell
-                      colSpan={6}
-                      className="text-center py-10 text-slate-500 italic"
-                    >
-                      Brak spraw do wyświetlenia.
-                    </TableCell>
-                  </TableRow>
-                )}
-              </TableBody>
-            </Table>
+                  )}
+                </TableBody>
+              </Table>
+            </div>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       <Dialog open={createOpen} onOpenChange={setCreateOpen}>
-        <DialogContent className="sm:max-w-[500px] bg-white dark:bg-slate-900">
+        <DialogContent className="sm:max-w-[500px] glass-panel-elevated rounded-2xl">
           <DialogHeader>
             <DialogTitle>Nowa Sprawa</DialogTitle>
             <DialogDescription>
@@ -368,7 +388,7 @@ export const CasesSection: React.FC = () => {
         open={Boolean(selectedCase)}
         onOpenChange={(open) => !open && setSelectedCase(null)}
       >
-        <DialogContent className="sm:max-w-[520px] bg-white dark:bg-slate-900">
+        <DialogContent className="sm:max-w-[520px] glass-panel-elevated rounded-2xl">
           <DialogHeader>
             <DialogTitle>{selectedCase?.title}</DialogTitle>
             <DialogDescription>

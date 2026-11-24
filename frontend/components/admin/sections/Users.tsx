@@ -140,153 +140,175 @@ export const UsersSection: React.FC = () => {
 
   return (
     <>
-      <Card className="border-none shadow-md">
-        <CardHeader className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="glass-panel rounded-2xl border border-white/60 dark:border-white/10 shadow-lg p-6 relative overflow-hidden">
+        {/* Specular highlight border */}
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/70 dark:via-white/20 to-transparent pointer-events-none" />
+
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200/50 dark:border-white/5">
           <div>
-            <CardTitle>Baza Klientów</CardTitle>
-            <CardDescription>
-              Zarządzaj profilami i uprawnieniami użytkowników.
-            </CardDescription>
+            <div className="flex items-center gap-2">
+              <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+                Baza Użytkowników i Klientów
+              </h2>
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+                {users.length} kont
+              </span>
+            </div>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Zarządzaj profilami, uprawnieniami RBAC oraz subskrypcjami użytkowników.
+            </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <div className="relative">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-slate-500" />
+              <Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
               <Input
-                placeholder="Szukaj..."
+                placeholder="Szukaj klientów..."
                 value={filter}
                 onChange={(e) => setFilter(e.target.value)}
-                className="pl-9 w-64 bg-slate-50 dark:bg-slate-900 border-none shadow-sm"
+                className="pl-9 w-64 h-9 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md rounded-xl border border-white/50 dark:border-white/10 text-xs shadow-inner"
               />
             </div>
             <Button
               type="button"
               onClick={() => setCreateOpen(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white gap-2"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white gap-2 rounded-xl shadow-md shadow-blue-500/25 h-9 px-4 text-xs font-semibold"
             >
-              <UserPlus className="h-4 w-4" /> Dodaj Klienta
+              <UserPlus className="h-3.5 w-3.5" /> Dodaj Klienta
             </Button>
           </div>
-        </CardHeader>
-        <CardContent>
+        </div>
+
+        <div className="pt-4">
           {loading ? (
-            <div className="space-y-4">
+            <div className="space-y-3">
               {Array.from({ length: 4 }).map((_, i) => (
                 <div
                   key={i}
-                  className="h-12 bg-slate-100 dark:bg-slate-900 animate-pulse rounded-lg"
+                  className="h-12 bg-white/30 dark:bg-slate-900/30 rounded-xl animate-pulse"
                 />
               ))}
             </div>
           ) : (
-            <Table>
-              <TableHeader>
-                <TableRow className="bg-slate-50/50 dark:bg-slate-900/50">
-                  <TableHead className="font-bold">Użytkownik</TableHead>
-                  <TableHead className="font-bold">Rola</TableHead>
-                  <TableHead className="font-bold">Plan</TableHead>
-                  <TableHead className="font-bold">Status</TableHead>
-                  <TableHead className="font-bold">Dołączył</TableHead>
-                  <TableHead className="text-right font-bold">Akcje</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {filteredUsers.length > 0 ? (
-                  filteredUsers.map((user) => (
-                    <TableRow
-                      key={user.id}
-                      className="hover:bg-slate-50/50 dark:hover:bg-slate-900/50 transition-colors"
-                    >
-                      <TableCell>
-                        <div className="flex flex-col">
-                          <span className="font-bold">{user.name}</span>
-                          <span className="text-xs text-slate-500">
-                            {user.email}
+            <div className="rounded-xl border border-slate-200/60 dark:border-white/5 overflow-hidden">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-slate-100/40 dark:bg-slate-900/40 backdrop-blur-md border-b border-slate-200/60 dark:border-white/5">
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Użytkownik</TableHead>
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Rola</TableHead>
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Plan</TableHead>
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Status</TableHead>
+                    <TableHead className="font-bold text-xs uppercase tracking-wider text-slate-500">Dołączył</TableHead>
+                    <TableHead className="text-right font-bold text-xs uppercase tracking-wider text-slate-500">Akcje</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {filteredUsers.length > 0 ? (
+                    filteredUsers.map((user) => (
+                      <TableRow
+                        key={user.id}
+                        className="hover:bg-white/60 dark:hover:bg-white/5 transition-colors border-b border-slate-100/60 dark:border-white/5 last:border-0"
+                      >
+                        <TableCell>
+                          <div className="flex flex-col">
+                            <span className="font-bold text-slate-900 dark:text-slate-100">{user.name}</span>
+                            <span className="text-xs text-slate-500">
+                              {user.email}
+                            </span>
+                          </div>
+                        </TableCell>
+                        <TableCell>
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                            {user.role}
                           </span>
-                        </div>
-                      </TableCell>
-                      <TableCell>{user.role}</TableCell>
-                      <TableCell>
-                        <Badge variant="outline" className="font-normal">
-                          {user.plan}
-                        </Badge>
-                      </TableCell>
-                      <TableCell>
-                        <Badge
-                          className={
-                            user.status === "Aktywny"
-                              ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border-none"
-                              : user.status === "Zaległość"
-                                ? "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 border-none"
-                                : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 border-none"
-                          }
-                        >
-                          {user.status}
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="text-slate-500">
-                        {user.joined}
-                      </TableCell>
-                      <TableCell className="text-right">
-                        <DropdownMenu>
-                          <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" size="icon">
-                              <MoreHorizontal className="h-4 w-4" />
-                            </Button>
-                          </DropdownMenuTrigger>
-                          <DropdownMenuContent align="end">
-                            <DropdownMenuLabel>Opcje</DropdownMenuLabel>
-                            <DropdownMenuItem
-                              className="gap-2 cursor-pointer"
-                              onClick={() =>
-                                toast.info(`Wybrano profil: ${user.email}`)
-                              }
-                            >
-                              <Edit className="h-4 w-4 text-blue-500" /> Podgląd
-                              profilu
-                            </DropdownMenuItem>
-                            <DropdownMenuItem
-                              className="gap-2 cursor-pointer"
-                              onClick={() =>
-                                toast.info(
-                                  `Link do resetu hasła wysłany na ${user.email}`,
-                                )
-                              }
-                            >
-                              <RotateCcw className="h-4 w-4 text-amber-500" />{" "}
-                              Resetuj hasło
-                            </DropdownMenuItem>
-                            <DropdownMenuSeparator />
-                            <DropdownMenuItem
-                              className="gap-2 text-red-600 cursor-pointer"
-                              onClick={() =>
-                                toast.info(`Status użytkownika: ${user.status}`)
-                              }
-                            >
-                              <Trash2 className="h-4 w-4" /> Zarchiwizuj
-                            </DropdownMenuItem>
-                          </DropdownMenuContent>
-                        </DropdownMenu>
+                        </TableCell>
+                        <TableCell>
+                          <Badge variant="outline" className="font-normal text-xs rounded-full border-slate-300 dark:border-slate-700">
+                            {user.plan}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold border ${
+                              user.status === "Aktywny"
+                                ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20"
+                                : user.status === "Zaległość"
+                                  ? "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20"
+                                  : "bg-red-500/10 text-red-600 dark:text-red-400 border-red-500/20"
+                            }`}
+                          >
+                            <span className={`inline-block size-1.5 rounded-full mr-1.5 ${
+                              user.status === "Aktywny"
+                                ? "bg-emerald-500"
+                                : user.status === "Zaległość"
+                                  ? "bg-amber-500"
+                                  : "bg-red-500"
+                            }`} />
+                            {user.status}
+                          </Badge>
+                        </TableCell>
+                        <TableCell className="text-slate-500 text-xs font-mono">
+                          {user.joined}
+                        </TableCell>
+                        <TableCell className="text-right">
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button variant="ghost" size="icon" className="rounded-xl hover:bg-white/60 dark:hover:bg-slate-800">
+                                <MoreHorizontal className="h-4 w-4" />
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end" className="glass-panel-elevated rounded-xl">
+                              <DropdownMenuLabel className="font-semibold text-xs">Opcje</DropdownMenuLabel>
+                              <DropdownMenuItem
+                                className="gap-2 cursor-pointer text-xs"
+                                onClick={() =>
+                                  toast.info(`Wybrano profil: ${user.email}`)
+                                }
+                              >
+                                <Edit className="h-3.5 w-3.5 text-blue-500" /> Podgląd profilu
+                              </DropdownMenuItem>
+                              <DropdownMenuItem
+                                className="gap-2 cursor-pointer text-xs"
+                                onClick={() =>
+                                  toast.info(
+                                    `Link do resetu hasła wysłany na ${user.email}`,
+                                  )
+                                }
+                              >
+                                <RotateCcw className="h-3.5 w-3.5 text-amber-500" /> Resetuj hasło
+                              </DropdownMenuItem>
+                              <DropdownMenuSeparator className="bg-slate-200/50 dark:bg-white/10" />
+                              <DropdownMenuItem
+                                className="gap-2 text-red-500 font-medium cursor-pointer text-xs"
+                                onClick={() =>
+                                  toast.info(`Status użytkownika: ${user.status}`)
+                                }
+                              >
+                                <Trash2 className="h-3.5 w-3.5" /> Zarchiwizuj
+                              </DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </TableCell>
+                      </TableRow>
+                    ))
+                  ) : (
+                    <TableRow>
+                      <TableCell
+                        colSpan={6}
+                        className="text-center py-10 text-slate-500 italic"
+                      >
+                        Brak użytkowników do wyświetlenia.
                       </TableCell>
                     </TableRow>
-                  ))
-                ) : (
-                  <TableRow>
-                    <TableCell
-                      colSpan={6}
-                      className="text-center py-10 text-slate-500 italic"
-                    >
-                      Brak użytkowników do wyświetlenia.
-                    </TableCell>
-                  </TableRow>
-                )}
-              </TableBody>
-            </Table>
+                  )}
+                </TableBody>
+              </Table>
+            </div>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       <Dialog open={createOpen} onOpenChange={setCreateOpen}>
-        <DialogContent className="sm:max-w-[480px] bg-white dark:bg-slate-900">
+        <DialogContent className="sm:max-w-[480px] glass-panel-elevated rounded-2xl">
           <DialogHeader>
             <DialogTitle>Dodaj Klienta</DialogTitle>
             <DialogDescription>
