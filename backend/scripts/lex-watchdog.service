@@ -1,0 +1,16 @@
+[Unit]
+Description=Lexportal Legal Watchdog Service
+After=network.target
+
+[Service]
+# Ścieżka do Pythona wewnątrz venv (dostosuj jeśli nazwa venv jest inna)
+ExecStart=/opt/lexportal-watchdog/venv/bin/python3 /opt/lexportal-watchdog/backend/scripts/lexportal_watchdog.py
+WorkingDirectory=/opt/lexportal-watchdog
+User=root
+Restart=always
+RestartSec=10
+# Ładowanie zmiennych z pliku .env
+# EnvironmentFile=/opt/lexportal-watchdog/.env
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,46 @@
+# Environment files
+.env
+.env.*
+!.env.example
+!*.example
+
+# Databases and local logs
+*.db
+*.sqlite3
+*.log
+*.swp
+watchdog.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+backend/venv/
+backend/.pytest_cache/
+.pytest_cache/
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+frontend/test-results/
+frontend/test-results-*/
+*coverage*.txt
+*coverage*.log
+*ts_errors.txt
+
+# IDE / Editor
+.vscode/
+.idea/
+.kilo/
+.agents/
+
+# Benchmarks and temp outputs
+benchmark_output.txt
+benchmark_res.txt
+orchestrator_res.txt
+backend/uploads/
+uploads/

@@ -1,0 +1,128 @@
+# =============================================================================
+# LexPortal - Produkcyjna Konfiguracja Orkiestracji (Root Level)
+# =============================================================================
+
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: lexportal_db_prod
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-lexportal}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-lexportal123}
+      POSTGRES_DB: ${POSTGRES_DB:-lexportal}
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-lexportal} -d $${POSTGRES_DB:-lexportal}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - lexportal_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: lexportal_redis_prod
+    restart: always
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - lexportal_network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+    container_name: lexportal_backend_prod
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-lexportal}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-lexportal123}
+      POSTGRES_DB: ${POSTGRES_DB:-lexportal}
+      POSTGRES_HOST: ${POSTGRES_HOST:-db}
+      DATABASE_URL: ${DATABASE_URL:-}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      SECRET_KEY: ${SECRET_KEY}
+      JWT_SECRET: ${JWT_SECRET}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      MOLLIE_API_KEY: ${MOLLIE_API_KEY}
+      APP_BASE_URL: ${APP_BASE_URL}
+      ENVIRONMENT: PRODUCTION
+    networks:
+      - lexportal_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: frontend.dockerfile
+    container_name: lexportal_frontend_prod
+    restart: always
+    depends_on:
+      - backend
+    environment:
+      BACKEND_URL: http://backend:8000
+      PORT: 80
+      VIRTUAL_HOST: ${DOMAIN_NAME}
+      LETSENCRYPT_HOST: ${DOMAIN_NAME}
+    expose:
+      - "80"
+    networks:
+      - lexportal_network
+
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy:alpine
+    container_name: lexportal_nginx_proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - conf:/etc/nginx/conf.d
+      - vhost:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - certs:/etc/nginx/certs:ro
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - lexportal_network
+
+  acme-companion:
+    image: nginxproxy/acme-companion
+    container_name: lexportal_acme_companion
+    restart: always
+    environment:
+      - DEFAULT_EMAIL=${LETSENCRYPT_EMAIL}
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - vhost:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - acme:/etc/acme.sh
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    depends_on:
+      - nginx-proxy
+    networks:
+      - lexportal_network
+
+networks:
+  lexportal_network:
+    driver: bridge
+
+volumes:
+  postgres_prod_data:
+  conf:
+  vhost:
+  html:
+  certs:
+  acme:

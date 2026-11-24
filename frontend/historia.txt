@@ -1,0 +1,1000 @@
+  744  curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent"   -H 'Content-Type: application/json'   -H 'X-goog-api-key: AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw'   -X POST   -d '{
+  745      "contents": [
+  746        {
+  747          "parts": [
+  748            {
+  749              "text": "Explain how AI works in a few words"
+  750            }
+  751          ]
+  752        }
+  753      ]
+  754    }'
+  755  cd backend && pytest tests/test_ai_orchestrator.py
+  756  cd backend && pytest tests/test_ai_edge_cases.py
+  757  pytest tests/test_ai_edge_cases.py
+  758  cd backend && ./venv/bin/pytest tests/test_ai_orchestrator.py
+  759  cd ..
+  760  cd backend && ./venv/bin/pytest tests/test_ai_orchestrator.py
+  761  cd ..
+  762  cd backend && pytest tests/test_ai_orchestrator.py
+  763  cd ..
+  764  cd backend && ./venv/bin/pytest tests/test_gemini_upgrade_verification.py
+  765  pytest tests/test_ai_orchestrator.py
+  766  ./venv/bin/pip install cerebras
+  767  cd ..
+  768  cd backend && ./venv/bin/pytest tests/test_gemini_upgrade_verification.py tests/test_ai_orchestrator.py
+  769  source /home/rr/PROJECTS/SUKCES/17.02.2026_ToDo-SUKCES/.venv/bin/activate
+  770  ngrok 80
+  771  ngrok http 80
+  772  ngrok http 80 --pooling-enabled
+  773  cd backend && ./venv/bin/pytest tests/test_ai_orchestrator.py
+  774  cd /home/rr/PROJECTS/SUKCES/17.02.2026_ToDo-SUKCES
+  775  cd backend && ./venv/bin/pytest tests/test_gemini_upgrade_verification.py
+  776  cd /home/rr/PROJECTS/SUKCES/17.02.2026_ToDo-SUKCES
+  777  cd backend && ./venv/bin/pip install cerebras
+  778  cd /home/rr/PROJECTS/SUKCES/17.02.2026_ToDo-SUKCES
+  779  cd backend && ./venv/bin/pytest tests/test_gemini_upgrade_verification.py tests/test_ai_orchestrator.py
+  780  cd /home/rr/PROJECTS/SUKCES/17.02.2026_ToDo-SUKCES
+  781  docker-compose up -d --build
+  782  docker rm -f legal_db legal_redis || true && docker-compose up -d --build --remove-orphans
+  783  docker rm -f legal_db legal_redis || true && docker-compose up -d --build --remove-orphans
+  784  docker rm -f legal_db legal_redis legal_backend legal_frontend || true && docker-compose up -d --build --remove-orphans
+  785  docker-compose up -d --build
+  786  docker-compose ps
+  787  docker ps -a
+  788  docker-compose up -d --build frontend
+  789  grep -n "Poczta" /home/rr/PROJECTS/SUKCES/17.02.2026_ToDo-SUKCES/frontend/components/admin/DashboardSidebar.tsx
+  790  docker-compose down && docker-compose up -d --build
+  791  docker exec legal_frontend cat /usr/share/nginx/html/index.html
+  792  docker exec legal_frontend grep "Poczta" /usr/share/nginx/html/assets/index-CSmtbTWB.js
+  793  cd /home/rr/PROJECTS/SUKCES/17.02.2026_ToDo-SUKCES/frontend
+  794  cd frontend && npm run build && grep -r "Poczta" dist/assets/
+  795  npm run build && grep -r "Poczta" dist/assets/
+  796  cd /home/rr/PROJECTS/SUKCES/17.02.2026_ToDo-SUKCES
+  797  docker stop legal_frontend && docker rm legal_frontend && docker rmi 17022026_todo-sukces-frontend && docker-compose up -d --build frontend
+  798  docker ps
+  799  docker exec legal_frontend ls /usr/share/nginx/html/assets/
+  800  docker exec legal_frontend sh -c 'grep -r "Poczta" /usr/share/nginx/html/assets/'
+  801  docker exec legal_frontend sh -c 'grep "window.location.href" /usr/share/nginx/html/assets/*.js'
+  802  docker exec legal_frontend cat /usr/share/nginx/html/index.html
+  803  docker exec legal_frontend grep "Poczta" /usr/share/nginx/html/assets/index-i60X9koM.js
+  804  rm -rf frontend/dist && docker-compose down && docker-compose build --no-cache frontend && docker-compose up -d
+  805  source /home/rr/PROJECTS/SUKCES/17.02.2026_ToDo-SUKCES/.venv/bin/activate
+  806  curl https://sdk.cloud.google.com | bash
+  807  gcloud components install alpha beta skaffold minikube kubectl gke-gcloud-auth-plugin
+  808  sudo snap install google-cloud-cli 
+  809  sudo snap install google-cloud-cli --classsic
+  810  sudo snap install google-cloud-cli --classic
+  811  sudo snap install google-cloud-sdk
+  812  sudo snap install google-cloud-sdk --classic
+  813  curl https://sdk.cloud.google.com | bash
+  814  gcloud components install alpha beta skaffold minikube kubectl gke-gcloud-auth-plugin
+  815  sudo mkdir -p /etc/apt/keyrings
+  816  curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg |   sudo gpg --dearmor --yes -o /etc/apt/keyrings/antigravity-repo-key.gpg
+  817  echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" |   sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
+  818  sudo apt update
+  819  ~/.gemini/settings.json
+  820  sudo ~/.gemini/settings.json
+  821  sudo ~/.gemini/
+  822  sudo cd ~/.gemini/
+  823  cd ~/.gemini/
+  824  ls
+  825  nano  settings.json 
+  826  npx nx serve web
+  827  npx --yes create-nx-workspace@latest --help
+  828  npx create-nx-workspace@latest --help
+  829  npx --yes create-nx-workspace@latest . --name=lexportal --preset=apps --nxCloud=skip --packageManager=npm --no-interactive --ci=true
+  830  npx --yes create-nx-workspace@latest . --name=lexportal --preset=apps --nxCloud=skip --packageManager=npm --no-interactive --useGitHub=false
+  831  npx --yes create-nx-workspace@latest lexportal --preset=apps --nxCloud=skip --packageManager=npm --no-interactive --useGitHub=false --skipGit=true
+  832  cp -rn lexportal/. . && rm -rf lexportal
+  833  npm install --save-dev @nx/angular @nx/nest
+  834  npx nx g @nx/nest:app api --directory=apps/api --no-interactive --ci=skip
+  835  npx nx g @nx/nest:app api --name=api --directory=apps/api --no-interactive --ci=skip
+  836  npx nx g @nx/nest:app --name=api --directory=apps/api --no-interactive && npx nx g @nx/angular:app --name=web --directory=apps/web --routing --style=css --no-interactive
+  837  npx nx g @nx/js:lib --name=shared --directory=libs/shared --no-interactive
+  838  npm install prisma --save-dev && npm install @prisma/client
+  839  npx prisma init
+  840  npx prisma generate
+  841  npx prisma generate
+  842  npm install @nestjs/bullmq bullmq
+  843  npm install @ngrx/store @ngrx/effects @ngrx/entity @ngrx/store-devtools
+  844  npx nx g @nx/angular:ngrx documents --project=web --parent=apps/web/src/app/app.config.ts --no-interactive --minimal=false
+  845  npx nx g @nx/angular:ngrx-root-store --help && npx nx g @nx/angular:ngrx-feature-store --help
+  846  npx nx g @nx/angular:ngrx-root-store --parent=apps/web/src/app/app.config.ts --no-interactive && npx nx g @nx/angular:ngrx-feature-store --name=documents --parent=apps/web/src/app/app.routes.ts --no-interactive --facade=true
+  847  npx nx g @nx/angular:ngrx-root-store --help
+  848  npx nx g @nx/angular:ngrx-root-store --project=web --parent=apps/web/src/app/app.config.ts --no-interactive && npx nx g @nx/angular:ngrx-feature-store documents --project=web --parent=apps/web/src/app/app.routes.ts --no-interactive --facade=true
+  849  npx nx g @nx/angular:setup-tailwind --project=web --no-interactive
+  850  npx nx g @nx/angular:component components/dashboard --project=web --no-interactive && npx nx g @nx/angular:component components/document-list --project=web --no-interactive && npx nx g @nx/angular:component components/document-editor --project=web --no-interactive
+  851  npx nx g @nx/angular:component --help
+  852  npx nx g @nx/angular:component dashboard --path=apps/web/src/app/components/dashboard --no-interactive && npx nx g @nx/angular:component document-list --path=apps/web/src/app/components/document-list --no-interactive && npx nx g @nx/angular:component document-editor --path=apps/web/src/app/components/document-editor --no-interactive && npx nx g @nx/angular:service services/document --path=apps/web/src/app/services --no-interactive
+  853  mkdir -p apps/web/src/app/components/dashboard apps/web/src/app/components/document-list apps/web/src/app/components/document-editor apps/web/src/app/services
+  854  docker-compose up -d
+  855  npx prisma migrate dev --name init
+  856  docker-compose up -d
+  857  npx prisma generate && npx prisma migrate dev --name init
+  858  npx prisma generate && npx prisma migrate dev --name init
+  859  npx nx build api && npx nx build web
+  860  npx nx serve api
+  861  npx prisma generate && npx prisma migrate dev --name init
+  862  npx nx build api && npx nx build web
+  863  npx nx serve api
+  864  npx prisma migrate dev --name add_ai_report
+  865  npx prisma generate && npx nx build api
+  866  npx prisma generate && npx nx build api
+  867  npx nx build web
+  868  ls -la /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+  869  ls -la /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.agents/ /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.github/ /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.vscode/ /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/_docs/
+  870  ls -laR /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/ /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/ 2>/dev/null | head -200
+  871  ls /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.agents/rules/
+  872  ls -laR /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/ 2>/dev/null
+  873  ls /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.github/workflows/
+  874  ls -la /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/
+  875  ls -la /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/services/ /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/schemas/ /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/templates/
+  876  git -C /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/ remote get-url origin
+  877  ls -la /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/
+  878  ls -la /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/ /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/
+  879  docker-compose up -d
+  880  docker-compose up --build
+  881  mkdir -p /home/rr/angular-test/angular-test-rrs/apps/web/public && mv /home/rr/angular-test/angular-test-rrs/apps/web/src/assets/neural_justice_scales.png /home/rr/angular-test/angular-test-rrs/apps/web/public/neural_justice_scales.png
+  882  npx nx serve web
+  883  npx nx serve web
+  884  oz environment create   --name https---github.com-nordp360-gitignore-sobota   --docker-image warpdotdev/dev-base:latest   --repo nordp360/https---github.com-nordp360-gitignore-sobota   --setup-command "cd https---github.com-nordp360-gitignore-sobota/backend && pip install -r requirements.txt"   --setup-command "cd https---github.com-nordp360-gitignore-sobota/backend && playwright install --with-deps chromium"   --setup-command "cd https---github.com-nordp360-gitignore-sobota/frontend && npm install --legacy-peer-deps"   --output-format text
+  885  which oz || find /opt/warpdotdev -name "oz" -type f 2>/dev/null || find /usr/local/bin -name "oz*" 2>/dev/null
+  886  npm list -g oz 2>/dev/null; pip show oz-agent-sdk 2>/dev/null; ls /opt/warpdotdev/warp-terminal/resources/ 2>/dev/null
+  887  npm install -g oz-cli
+  888  oz environment create   --name https---github.com-nordp360-gitignore-sobota   --docker-image warpdotdev/dev-base:latest   --repo nordp360/https---github.com-nordp360-gitignore-sobota   --setup-command "cd https---github.com-nordp360-gitignore-sobota/backend && pip install -r requirements.txt"   --setup-command "cd https---github.com-nordp360-gitignore-sobota/backend && playwright install --with-deps chromium"   --setup-command "cd https---github.com-nordp360-gitignore-sobota/frontend && npm install --legacy-peer-deps"   --output-format text
+  889  echo 'export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"' >> ~/.bashrc
+  890  export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+  891  ls -la /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/
+  892  find /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/src -type f -name "*.tsx" -o -name "*.ts" | sort
+  893  find /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend -type f -name "*.py" | sort
+  894  find /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/src -type f | sort
+  895  find /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app -type f -name "*.py" | sort
+  896  ls -la /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/
+  897  find /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend -maxdepth 3 -type f | sort
+  898  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npx tsc --noEmit --pretty 2>&1
+  899  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npx tsc --noEmit --pretty 2>&1 | grep -E "DocumentAICenter|LawyerDashboard"
+  900  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && ls node_modules/.package-lock.json 2>/dev/null || ls node_modules 2>/dev/null | head -5
+  901  ls /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/node_modules 2>&1 | head -3
+  902  which bun 2>/dev/null || which npm 2>/dev/null
+  903  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && bun install 2>&1
+  904  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npx vite build 2>&1
+  905  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npx tsc --noEmit 2>&1 | grep "DocumentAICenter"
+  906  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npx tsc --noEmit 2>&1 | tail -1
+  907  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npx tsc --noEmit 2>&1 | grep -c "error TS"
+  908  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npx tsc --noEmit 2>&1 | grep "error TS"
+  909  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npx vitest run components/__tests__/DocumentAICenter.test.tsx 2>&1
+  910  warp_cli_binary_name environment list --output-format text
+  911  warp_cli_binary_name agent run-cloud     --environment <ENV_ID>     --prompt 'Read the oz-platform skill for instructions on using [CLI name] to solve: <task description>'
+  912  warp_cli_binary_name environment list --output-format text
+  913  run list
+  914  warp_cli_binary_name environment list --output-format text
+  915  history
+  916  history > historia_komend.md
+  917  npx nx serve web
+  918  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+  919  npx nx serve web
+  920  cd ..
+  921  docker-compose up -d
+  922  npx prisma migrate dev --name init
+  923  cd..
+  924  cat ~/.bash_history > historia_komend.md
+  925  docker-compose up --build
+  926  ls
+  927  pwd
+  928  cd ..
+  929  ls
+  930  cd ..
+  931  cd ls
+  932  cd ..
+  933  ls
+  934  cd ..
+  935  ls
+  936  cd rr
+  937  ls
+  938  npx nx serve web
+  939  ls
+  940  npm run dev
+  941  npx nx serve web
+  942  ls
+  943  npm run dev
+  944  sudo npm uninstall -g openclaw
+  945  rm -rf ~/.clawdbot
+  946  rm -rf ~/clawdbot
+  947  grep clawbot
+  948  rm -rf ~/.openclaw
+  949  npm uninstall -g openclaw
+  950  rm -f ~/Library/LaunchAgents/com.clawdbot.gateway.plist.
+  951  docker ps
+  952  sudo systemctl stop docker docker.socket
+  953  docker stop $(docker ps -aq) && docker system prune -af --volumes
+  954  cd /home/rr
+  955  ls
+  956  cd angular-test/
+  957  cd angular-test-rrs/
+  958  npm run dev
+  959  docker-compose up -d
+  960  npx prisma generate
+  961  npx prisma migrate dev --name init
+  962  # Backend (NestJS)
+  963  npx nx serve api
+  964  ls
+  965  [200~docker-compose up -d
+  966  docker-compose up -d
+  967  npx prisma generate
+  968  npx prisma migrate dev --name init
+  969  npx nx serve api
+  970  cd /home/rr/angular-test/angular-test-rrs
+  971  npx nx build api
+  972  docker stop $(docker ps -aq) && docker system prune -af --volumes
+  973  docker ps
+  974  ls
+  975  docker ps
+  976  docker stop $(docker ps -aq) && docker system prune -af --volumes
+  977  docker ps
+  978  sudo snap remove chromium
+  979  sudo apt remove chromium-browser
+  980  sudo apt remove antigravity
+  981  sudo apt purge antigravity
+  982  sudo apt autoremove
+  983  rm -rf ~/.config/Antigravity
+  984  rm -rf ~/.local/share/antigravity
+  985  rm -rf ~/.antigravity
+  986  pkill antigravity
+  987  sudo mkdir -p /etc/apt/keyrings
+  988  curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg |   sudo gpg --dearmor --yes -o /etc/apt/keyrings/antigravity-repo-key.gpg
+  989  echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" |   sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
+  990  sudo apt update
+  991  sudo apt install antigravity
+  992  curl -s http://localhost:4200/ | head -n 20
+  993  npx nx e2e web-e2e --project=chromium
+  994  npx playwright test web-e2e --project=chromium
+  995  cd /home/rr/angular-test/angular-test-rrs/apps/web-e2e
+  996  npx playwright test
+  997  cd /home/rr/angular-test/angular-test-rrs
+  998  rm /home/rr/angular-test/angular-test-rrs/apps/web-e2e/src/example.spec.ts
+  999  npx nx run web-e2e:e2e --project=chromium --grep "should display AI Risk Assessment in the editor sidebar"
+ 1000  npx playwright test web-e2e --grep "should display AI Risk Assessment in the editor sidebar"
+ 1001  npx nx kill
+ 1002  npx playwright test web-e2e --grep "should display AI Risk Assessment in the editor sidebar"
+ 1003  pkill -f "node"
+ 1004  cat /home/rr/angular-test/angular-test-rrs/apps/web/src/app/components/dashboard/dashboard.component.ts
+ 1005  rm -f /home/rr/angular-test/angular-test-rrs/apps/web/src/app/components/dashboard/dashboard.component.ts
+ 1006  npx playwright test web-e2e --project=chromium --grep "LexPortal Legal Templates & Clauses Verification"
+ 1007  npx nx e2e web-e2e --project=chromium --grep "LexPortal Legal Templates & Clauses Verification"
+ 1008  npx nx e2e web-e2e --project=chromium --grep "LexPortal Legal Templates & Clauses Verification"
+ 1009  npx e2e web-e2e --project=chromium --grep "LexPortal Legal Templates & Clauses Verification"
+ 1010  npm install
+ 1011  npx nx e2e web-e2e --project=chromium --grep "LexPortal Legal Templates & Clauses Verification"
+ 1012  npx playwright show-report ../../dist/.playwright/apps/web-e2e/playwright-report
+ 1013  npx nx e2e web-e2e --project=chromium
+ 1014  npx playwright test web-e2e --project=chromium --grep "LexPortal Legal Templates & Clauses Verification"
+ 1015  cd /home/rr/angular-test/angular-test-rrs/apps/web-e2e
+ 1016  npx playwright show-report ../../dist/.playwright/apps/web-e2e/playwright-report
+ 1017  cd /home/rr/angular-test/angular-test-rrs
+ 1018  npx nx e2e web-e2e --project=chromium --grep "LexPortal Legal Templates & Clauses Verification"
+ 1019  npx nx e2e web-e2e --project=chromium
+ 1020  curl -s http://localhost:4200/ | head -n 20
+ 1021  npx nx serve web
+ 1022  docker-compose up -d
+ 1023  npx prisma generate
+ 1024  npx prisma migrate dev --name init
+ 1025  npx nx serve api
+ 1026  npx prettier --write apps/web/src/app/components/dashboard/dashboard.component.html
+ 1027  npx prettier --write apps/web/src/app/components/dashboard/dashboard.component.html
+ 1028  npx nx lint web
+ 1029  npx prettier --write apps/web/src/app/components/dashboard/dashboard.component.html
+ 1030  kill -9 0f50fee0-657c-4a8e-b5a1-202e764bc78f 8216fa8a-dbf1-4042-a34a-1c370d6a7b34
+ 1031  npx prettier --write apps/web/src/app/components/dashboard/dashboard.component.html
+ 1032  npx nx lint web
+ 1033  npx nx lint web
+ 1034  mkdir -p apps/web/src/app/pages && \
+ 1035  COMPONENTS=(
+ 1036    "login" "register" "payment" "payment-status" "document-analysis"
+ 1037    "knowledge-base" "help" "services" "about" "career" "blog" "contact"
+ 1038    "terms" "privacy" "gdpr" "privacy-policy" "platform-guide" "resources"
+ 1039    "ai-assistant" "cases" "client-dashboard" "lawyer-dashboard" "admin-dashboard"
+ 1040    "sales-dashboard" "profile" "document-creator" "client-document-wizard"
+ 1041  )
+ 1042  for comp in "${COMPONENTS[@]}"; do
+ 1043    npx nx g @nx/angular:component "pages/$comp" --project=web --standalone --skipTests --inlineStyle=false --inlineTemplate=false --export=false --flat=false
+ 1044  done
+ 1045  npx nx g @nx/angular:component pages/login --project=web --standalone --skipTests --inlineStyle=false --inlineTemplate=false --export=false --flat=false --style=css
+ 1046  n
+ 1047  # Generate Angular components manually
+ 1048  cd apps/web/src/app/pages || mkdir -p apps/web/src/app/pages && cd apps/web/src/app/pages
+ 1049  COMPONENTS=(
+ 1050    "login" "register" "payment" "payment-status" "document-analysis"
+ 1051    "knowledge-base" "help" "services" "about" "career" "blog" "contact"
+ 1052    "terms" "privacy" "gdpr" "privacy-policy" "platform-guide" "resources"
+ 1053    "ai-assistant" "cases" "client-dashboard" "lawyer-dashboard" "admin-dashboard"
+ 1054    "sales-dashboard" "profile" "document-creator" "client-document-wizard"
+ 1055  )
+ 1056  # Convert kebab-case to PascalCase for the class name
+ 1057  to_pascal_case() {
+ 1058    echo "$1" | awk -F'-' '{for(i=1;i<=NF;i++){$i=toupper(substr($i,1,1)) substr($i,2)}} 1' OFS=''
+ 1059  }
+ 1060  for comp in "${COMPONENTS[@]}"; do
+ 1061    mkdir -p "$comp"
+ 1062    class_name=$(to_pascal_case "$comp")
+ 1063    
+ 1064    cat <<EOF > "$comp/$comp.component.ts"
+ 1065  import { Component } from '@angular/core';
+ 1066  import { CommonModule } from '@angular/common';
+ 1067  import { RouterModule } from '@angular/router';
+ 1068  @Component({
+ 1069    selector: 'app-$comp',
+ 1070    standalone: true,
+ 1071    imports: [CommonModule, RouterModule],
+ 1072    templateUrl: './$comp.component.html'
+ 1073  })
+ 1074  export class ${class_name}Component {}
+ 1075  EOF
+ 1076    echo "<div class=\"p-8 bg-white dark:bg-slate-900 min-h-screen\"><h1 class=\"text-2xl font-bold\">${class_name}</h1></div>" > "$comp/$comp.component.html"
+ 1077  done
+ 1078  echo "Done"
+ 1079  cd /home/rr/angular-test/angular-test-rrs
+ 1080  mkdir -p apps/web/src/app/guards
+ 1081  npx prettier --write apps/web/src/app/app.routes.ts && npx nx lint web
+ 1082  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.* && npx nx lint web
+ 1083  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.html && npx nx lint web
+ 1084  npx prettier --write apps/web/src/app/pages/lawyer-dashboard/lawyer-dashboard.component.* && npx nx lint web
+ 1085  npx prettier --write apps/web/src/app/pages/admin-dashboard/admin-dashboard.component.* && npx nx lint web
+ 1086  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.* && npx nx lint web
+ 1087  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.* && npx nx lint web
+ 1088  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.html apps/web/src/app/pages/client-dashboard/client-dashboard.component.ts && npx nx lint web
+ 1089  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.ts && npx nx lint web
+ 1090  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.html apps/web/src/app/pages/client-dashboard/client-dashboard.component.ts && npx nx lint web
+ 1091  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.html apps/web/src/app/pages/client-dashboard/client-dashboard.component.ts && npx nx lint web
+ 1092  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.html apps/web/src/app/pages/client-dashboard/client-dashboard.component.ts && npx nx lint web
+ 1093  npx prettier --write apps/web/src/app/pages/client-dashboard/client-dashboard.component.html && npx nx lint web
+ 1094  mkdir -p apps/web/src/app/utils && cp /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/utils/faqData.ts apps/web/src/app/utils/faqData.ts
+ 1095  ng serve
+ 1096  sudo apt install ng-common
+ 1097  ng serve
+ 1098  npx nx build api && node dist/apps/api/main.js
+ 1099  npx nx build api && node dist/apps/api/main.js
+ 1100  npx prisma generate && npx nx build api && node dist/apps/api/main.js
+ 1101  npm install pg @types/pg @prisma/adapter-pg
+ 1102  npx nx build api && node dist/apps/api/main.js
+ 1103  curl -s -f http://localhost:3000/api || echo "Failing"
+ 1104  curl -i http://localhost:3000/api
+ 1105  npx nx serve web
+ 1106  npx prettier --write apps/web/src/app/app.routes.ts && npx nx lint web
+ 1107  nx run web:lint
+ 1108  npx nx serve web
+ 1109  npx nx serve api
+ 1110  npx nx serve api
+ 1111  docker stop $(docker ps -aq) && docker system prune -af --volumes
+ 1112  docker-compose ps
+ 1113  docker-compose up -d --build
+ 1114  docker-compose logs -f
+ 1115  docker-compose up -d --build
+ 1116  docker-compose ps
+ 1117  docker-compose up -d --build
+ 1118  docker-compose down && docker-compose up -d
+ 1119  python check_models.py
+ 1120  python -c "import os; print(os.environ.get('GEMINI_API_KEY'))"
+ 1121  ls -la
+ 1122  .venv/bin/python check_models.py
+ 1123  python check_models.py
+ 1124  python3 check_models.py
+ 1125  source .venv/bin/activate
+ 1126  python3 check_models.py
+ 1127  .venv/bin/python3 check_models.py
+ 1128  .venv/bin/python -c "from backend.app.services.gemini import GeminiService"
+ 1129  PYTHONPATH=backend .venv/bin/python -c "from app.services.gemini import GeminiService"
+ 1130  source .venv/bin/activate
+ 1131  .venv/bin/python3 check_models.py
+ 1132  ls -la backend/
+ 1133  python check_models.py
+ 1134  backend/.venv/bin/python check_models.py
+ 1135  docker ps | grep legal_backend
+ 1136  docker logs --tail 20 legal_backend
+ 1137  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1138  cat package.json | grep cmdk
+ 1139  npm run build
+ 1140  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1141  cat requirements.txt
+ 1142  playwright install chromium
+ 1143  .venv/bin/python -m playwright install chromium
+ 1144  ../.venv/bin/python -m playwright install chromium
+ 1145  ../.venv/bin/python test_scraper.py
+ 1146  ../.venv/bin/python test_scraper.py
+ 1147  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1148  cat package.json
+ 1149  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1150  rm test_scraper.py
+ 1151  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1152  npm run test:e2e
+ 1153  npm run test:e2e -- e2e/document-flow.spec.ts
+ 1154  npm run test:e2e -- e2e/document-flow.spec.ts
+ 1155  npm run test:e2e -- e2e/document-flow.spec.ts
+ 1156  ps aux | grep playwright
+ 1157  npm run test:e2e -- e2e/document-flow.spec.ts
+ 1158  npm run test:e2e -- e2e/document-flow.spec.ts
+ 1159  npm run test:e2e -- e2e/document-flow.spec.ts
+ 1160  npm run test:e2e -- e2e/document-flow.spec.ts
+ 1161  npm run test:e2e -- e2e/document-flow.spec.ts
+ 1162  grep -o 'data-sonner[^"]*\|role=[^"]*"[^"]*"' node_modules/sonner/dist/index.js | head -20
+ 1163  grep -oP '(?<=role=")[^"]+' node_modules/sonner/dist/index.js | sort -u
+ 1164  node -e "
+ 1165  const fs = require('fs');
+ 1166  const src = fs.readFileSync('node_modules/sonner/dist/index.js', 'utf8');
+ 1167  // find 'role' in source
+ 1168  const matches = src.match(/role[^,]{0,40}/g);
+ 1169  if(matches) console.log([...new Set(matches)].slice(0, 20).join('\n'));
+ 1170  "
+ 1171  node -e "
+ 1172  const fs = require('fs');
+ 1173  const src = fs.readFileSync('node_modules/sonner/dist/index.js', 'utf8');
+ 1174  // find 'role' in source
+ 1175  const matches = src.match(/role[^,]{0,40}/g);
+ 1176  if(matches) console.log([...new Set(matches)].slice(0, 20).join('\n'));
+ 1177  "
+ 1178  mkdir -p /home/rr/.gemini/antigravity/scratch/voxel-game && ls /home/rr/.gemini/antigravity/scratch/voxel-game
+ 1179  cd /home/rr/.gemini/antigravity/scratch/voxel-game 
+ 1180  ls
+ 1181  cd ..
+ 1182  ls
+ 1183  cd /home/rr/.gemini/antigravity/scratch
+ 1184  mkdir -p /home/rr/.gemini/antigravity/scratch/voxel-game
+ 1185  python3 -m http.server 8080
+ 1186  cd /home/rr/.gemini/antigravity/scratch/voxel-game
+ 1187  source /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.venv/bin/activate
+ 1188  mkdir -p /home/rr/.gemini/antigravity/scratch/voxel-game && cd /home/rr/.gemini/antigravity/scratch/voxel-game && npx -y create-vite@latest --help 2>&1 | head -40
+ 1189  node server.js
+ 1190  node server.js
+ 1191  cd /home/rr/.gemini/antigravity/scratch
+ 1192  cd /home/rr/.gemini/antigravity/scratch/voxel-game
+ 1193  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npx -y create-vite@latest ./ --template vanilla --no-interactive && npm install three simplex-noise
+ 1194  ls /home/rr/.gemini/antigravity/scratch/voxel-game/
+ 1195  mkdir -p /home/rr/.gemini/antigravity/scratch/voxel-game/src
+ 1196  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npm install 2>&1
+ 1197  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npm run dev 2>&1
+ 1198  npm install localforage ws
+ 1199  npm run dev
+ 1200  pkill -f "vite" ; pkill -f "node server"; sleep 1 && node server.js &
+ 1201  npm run dev
+ 1202  node server.js
+ 1203  pkill node && node server.js
+ 1204  npm run build
+ 1205  npm run dev
+ 1206  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npm install better-sqlite3 @types/better-sqlite3 2>&1 | tail -5
+ 1207  cd /home/rr/.gemini/antigravity/scratch/voxel-game && node server.js & sleep 2 && curl -I http://localhost:8080 2>&1 || echo "Server started"
+ 1208  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npx vite --port 3000 --host 2>&1 | tee vite_output.txt & sleep 3 && grep "Local:" vite_output.txt
+ 1209  cat /home/rr/.gemini/antigravity/scratch/voxel-game/vite_output.txt
+ 1210  cat /home/rr/.gemini/antigravity/scratch/voxel-game/vite_output.txt
+ 1211  npm run test:e2e -- e2e/document-flow.spec.ts
+ 1212  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1213  docker exec legal_backend python3 -c "
+ 1214  from app.db.session import engine
+ 1215  print('DB URL:', str(engine.url)[:50])
+ 1216  " 2>&1 | head -5
+ 1217  pytest
+ 1218  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1219  docker ps
+ 1220  grep -r "modelDistribution" .
+ 1221  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1222  grep -r "modelDistribution" . | grep -v "node_modules" | grep -v "venv"
+ 1223  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1224  grep -r "modelDistribution" . | grep -v "node_modules" | grep -v "dist" | grep -v ".git"
+ 1225  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1226  pytest --version && pip list | grep playwright
+ 1227  E2E_BASE_URL=http://localhost pytest tests/e2e/test_user_flows.py
+ 1228  docker exec -e E2E_BASE_URL=http://frontend legal_backend pytest -p no:warnings tests/e2e/test_user_flows.py
+ 1229  docker exec -e E2E_BASE_URL=http://frontend legal_backend pytest -p no:warnings tests/e2e/test_user_flows.py::test_registration_validation_and_success
+ 1230  docker exec legal_backend curl -I http://frontend
+ 1231  docker exec legal_backend python -c "import urllib.request; print(urllib.request.urlopen('http://frontend').getcode())"
+ 1232  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/components/admin/sections/
+ 1233  grep -r "model_distribution" .
+ 1234  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1235  grep -ri "modelDistrib" . | grep -v "node_modules" | grep -v "dist"
+ 1236  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/dist
+ 1237  grep -r "modelDistribution" .
+ 1238  grep -r "model_distribution" .
+ 1239  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1240  docker exec legal_db psql -U lexuser -d lexdb -c "SELECT email, is_superuser, is_active FROM \"user\" WHERE email='admin@lexportal.pl';" 2>&1 && echo "---" && docker exec legal_db psql -U lexuser -d lexdb -c "SELECT COUNT(*) as audit_count FROM audit_log;" 2>&1
+ 1241  docker exec legal_db psql -U postgres -d lexdb -c "SELECT email, is_superuser, is_active FROM \"user\" WHERE email='admin@lexportal.pl';" 2>&1 || docker exec legal_db psql -U postgres -l 2>&1 | head -10
+ 1242  docker exec legal_db psql -U postgres -d lexportal -c "SELECT email, is_superuser, is_active FROM \"user\" WHERE email='admin@lexportal.pl';" 2>&1 && echo "---AUDIT---" && docker exec legal_db psql -U postgres -d lexportal -c "SELECT COUNT(*) as audit_count FROM audit_log;" 2>&1 && echo "---SETTINGS---" && docker exec legal_db psql -U postgres -d lexportal -c "SELECT key, value FROM system_setting LIMIT 5;" 2>&1
+ 1243  # Login using form data (FastAPI OAuth2 format)
+ 1244  RESPONSE=$(curl -s -X POST http://localhost:8000/api/v1/auth/login \
+ 1245    -H "Content-Type: application/x-www-form-urlencoded" \
+ 1246    -d "username=admin@lexportal.pl&password=admin123")
+ 1247  echo "Login response: $RESPONSE" | head -5
+ 1248  TOKEN=$(echo $RESPONSE | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('access_token',''))" 2>/dev/null)
+ 1249  if [ -z "$TOKEN" ]; then
+ 1250    echo "Trying JSON login..."
+ 1251    RESPONSE=$(curl -s -X POST http://localhost:8000/api/v1/auth/login/json \
+ 1252      -H "Content-Type: application/json" \
+ 1253      -d '{"email":"admin@lexportal.pl","password":"admin123"}')
+ 1254    TOKEN=$(echo $RESPONSE | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('access_token',''))" 2>/dev/null)
+ 1255  fi
+ 1256  echo "Token: ${TOKEN:0:50}..."
+ 1257  echo ""
+ 1258  echo "=== AUDIT LOGS (5 latest) ==="
+ 1259  curl -s "http://localhost:8000/api/v1/audit/logs?page=1&size=5" \
+ 1260    -H "Authorization: Bearer $TOKEN" | python3 -c "
+ 1261  import sys, json
+ 1262  d = json.load(sys.stdin)
+ 1263  print(f'Total: {d.get(\"total\")}, Items: {len(d.get(\"items\",[]))}')
+ 1264  for i in d.get('items', [])[:5]:
+ 1265      print(f'  {i[\"action\"]:30} | {i[\"actor_name\"]:20} | {i[\"status\"]} | {i[\"ip_address\"]}')
+ 1266  " 2>&1
+ 1267  echo ""
+ 1268  echo "=== CONFIG STATUS ==="
+ 1269  curl -s "http://localhost:8000/api/v1/config/status" \
+ 1270    -H "Authorization: Bearer $TOKEN" | python3 -m json.tool 2>&1
+ 1271  # Try different auth endpoints
+ 1272  curl -sv "http://localhost:8000/api/v1/auth/login" 2>&1 | grep "< HTTP\|Allow\|detail" | head -5
+ 1273  echo "---"
+ 1274  # Try to list auth routes
+ 1275  curl -s "http://localhost:8000/openapi.json" | python3 -c "
+ 1276  import sys,json
+ 1277  d=json.load(sys.stdin)
+ 1278  auth_paths = {k:v for k,v in d['paths'].items() if 'auth' in k.lower()}
+ 1279  for p,v in auth_paths.items():
+ 1280      methods = list(v.keys())
+ 1281      print(f'{methods} {p}')
+ 1282  " 2>&1 | head -20
+ 1283  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1284  docker exec -e E2E_BASE_URL=http://frontend legal_backend pytest -p no:warnings tests/e2e/test_user_flows.py
+ 1285  docker-compose ps
+ 1286  grep -nC 5 "Masz" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 20
+ 1287  grep -n "Masz" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1288  sed -n '850,900p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1289  sed -n '860,880p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1290  sed -n '866p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | xxd
+ 1291  sed -i 's/ - /-/g' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1292  sed -n '3531p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | xxd
+ 1293  grep -o "{" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l; grep -o "}" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l
+ 1294  grep -o "(" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l; grep -o ")" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l
+ 1295  grep -o "\`" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l
+ 1296  sed -n '1060,1080p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1297  grep -nC 5 "\$" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 50
+ 1298  grep -nF "$" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 50
+ 1299  sed -n '922p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | xxd
+ 1300  grep -n "handleLogout" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1301  grep -n "handleMarkAllRead" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1302  grep -nC 10 "Powiadomienia" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 100
+ 1303  grep -n "handleExportPDF" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1304  netstat -tunlp | grep :8000
+ 1305  curl http://localhost:8000/health
+ 1306  curl http://localhost:8000/
+ 1307  cd frontend && npx playwright test e2e/happy-path.spec.ts e2e/navigation.spec.ts
+ 1308  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1309  grep -n "class Notification" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/db/models.py
+ 1310  grep -n "activeView ===" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1311  grep -i "AI" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 20
+ 1312  find . -name "AdminDashboard.tsx"
+ 1313  find . -name "AIOptimizerDashboard.tsx"
+ 1314  grep -n "useState<" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 20
+ 1315  grep -n "const \[activeView" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1316  grep "toast" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1317  tail -n 20 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1318  grep -n "^};" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1319  grep -n "};" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 100
+ 1320  grep -nC 5 "export default ClientDashboard" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+ 1321  grep -n "^  };" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 50
+ 1322  grep -n "activeView ===" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | tail -n 20
+ 1323  tail -n 60 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/api/v1/endpoints/ai.py
+ 1324  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1325  cat /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/vitest.ai-benchmark.config.ts 2>/dev/null || echo "FILE_NOT_FOUND"
+ 1326  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npm run test:ai-benchmark 2>&1
+ 1327  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && BASE_URL=http://localhost:8000 npm run test:ai-benchmark 2>&1 | tail -n 40
+ 1328  grep -n "BASE_URL\|API_URL" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/tests/ai_benchmark/orchestrator_tiers.test.ts | head -10
+ 1329  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && node -e "
+ 1330  const BASE_URL = (process.env.BASE_URL) ? process.env.BASE_URL : 'http://localhost:8000';
+ 1331  const API_URL = BASE_URL + '/api/v1/ai/analyze-case';
+ 1332  console.log('BASE_URL:', BASE_URL);
+ 1333  console.log('API_URL:', API_URL);
+ 1334  "
+ 1335  git branch
+ 1336  tail -n 100 _docs/ToDo.txt
+ 1337  find . -maxdepth 4 -mmin -1440 -not -path '*/.*'
+ 1338  netstat -tunlp | grep -E ":3000|:8000"
+ 1339  ls -R frontend/src
+ 1340  mkdir -p frontend/src/components/admin && cp frontend/components/admin/AIOptimizerDashboard.tsx frontend/src/components/admin/AIResourceOptimizer.tsx && rm frontend/components/admin/AIOptimizerDashboard.tsx
+ 1341  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1342  npx playwright test e2e/ai-optimizer.spec.ts
+ 1343  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/db
+ 1344  grep -n "class ChatMessage" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/db/models.py
+ 1345  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1346  npx playwright test frontend/e2e/chat.spec.ts frontend/e2e/template-fixer.spec.ts
+ 1347  npx playwright test frontend/e2e/chat.spec.ts frontend/e2e/template-fixer.spec.ts
+ 1348  npx playwright test frontend/e2e/chat.spec.ts
+ 1349  curl -I http://localhost:3000/admin
+ 1350  npx playwright test frontend/e2e/chat.spec.ts --reporter=list
+ 1351  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1352  python3 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/stress_test_ddos.py > /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/stress_log.txt 2>&1
+ 1353  ps aux | grep uvicorn
+ 1354  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app
+ 1355  uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --log-level debug
+ 1356  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1357  uvicorn app.main:app --host 0.0.0.0 --port 8000 --log-level debug
+ 1358  /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/.venv/bin/python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --log-level debug
+ 1359  python3 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/test_encryption_service.py
+ 1360  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1361  npx playwright test frontend/e2e/chat.spec.ts --reporter=line
+ 1362  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1363  rm /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/e2e/chat.spec.ts /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/e2e/template-fixer.spec.ts /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/test_encryption_service.py /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/stress_test_ddos.py /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/stress_log.txt
+ 1364  npx playwright test e2e/ai-optimizer.spec.ts
+ 1365  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1366  ps aux | grep playwright
+ 1367  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1368  npx playwright test e2e/ai-optimizer.spec.ts
+ 1369  python3 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/test_encryption_service.py
+ 1370  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1371  npx playwright test frontend/e2e/chat.spec.ts
+ 1372  cd /home/rr/.gemini/antigravity/scratch/voxel-game/
+ 1373  node server.js
+ 1374  cd /home/rr/.gemini/antigravity/scratch/voxel-game/
+ 1375  node server.js
+ 1376  npm run build
+ 1377  npm run build
+ 1378  npm run build
+ 1379  npm run build
+ 1380  npm run build
+ 1381  npm run build
+ 1382  npm run build
+ 1383  npm run build
+ 1384  npm run build
+ 1385  npm run build
+ 1386  npm run build
+ 1387  cd frontend/
+ 1388  npm install @radix-ui/react-slot
+ 1389  cd frontend/
+ 1390  npm run dev
+ 1391  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/frontend
+ 1392  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+ 1393  python3 -m pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1394  ls -la | grep venv
+ 1395  python -m pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1396  docker ps
+ 1397  docker exec legal_backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1398  docker exec legal_backend ls -la app/tests
+ 1399  docker exec legal_backend ls -la
+ 1400  docker cp app/tests/test_secure_chat.py legal_backend:/app/app/tests/test_secure_chat.py || docker cp app/tests/test_secure_chat.py legal_backend:/app/tests/test_secure_chat.py
+ 1401  docker cp app/tests/test_cruds_regression.py legal_backend:/app/tests/test_cruds_regression.py && docker cp app/tests/test_drive_and_ai_risk.py legal_backend:/app/tests/test_drive_and_ai_risk.py && docker exec legal_backend pytest tests/test_secure_chat.py tests/test_cruds_regression.py tests/test_drive_and_ai_risk.py -v
+ 1402  docker exec -e PYTHONPATH=/app legal_backend pytest tests/test_secure_chat.py tests/test_cruds_regression.py tests/test_drive_and_ai_risk.py -v
+ 1403  docker exec legal_backend ls -la app
+ 1404  /bin/bash -c "source .venv/bin/activate && pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v"
+ 1405  docker inspect legal_backend --format '{{json .Mounts}}'
+ 1406  docker-compose run --build --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1407  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1408  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1409  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1410  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1411  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1412  echo "google-api-python-client==2.118.0\ngoogle-auth-httplib2==0.2.0\ngoogle-auth-oauthlib==1.2.0" >> requirements.txt
+ 1413  docker-compose build backend
+ 1414  docker-compose run --rm backend pytest app/tests/test_drive_and_ai_risk.py::test_google_drive_mock_upload -v
+ 1415  docker-compose run --rm backend pytest app/tests/test_drive_and_ai_risk.py::test_google_drive_mock_upload -v
+ 1416  docker-compose build backend
+ 1417  docker-compose run --rm backend pytest app/tests/test_drive_and_ai_risk.py::test_google_drive_mock_upload -v
+ 1418  ls -a /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/.env
+ 1419  find /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02 -name "*.py" | grep "ai"
+ 1420  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+ 1421  echo "pyotp==2.9.0\nqrcode==7.4.2" >> requirements.txt
+ 1422  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/app
+ 1423  find . -name "audit.py"
+ 1424  grep -r "\.websocket" .
+ 1425  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+ 1426  ls app/core/encryption.py app/services/ai_risk.py app/services/google_drive.py
+ 1427  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/app
+ 1428  grep -r "get_current_active_superuser" .
+ 1429  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+ 1430  pytest app/tests/test_secure_chat.py app/tests/test_drive_and_ai_risk.py
+ 1431  pip list | grep -E "fastapi|pydantic|pytest"
+ 1432  pip install -r requirements.txt
+ 1433  python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+ 1434  source venv/bin/activate && pytest app/tests/test_secure_chat.py app/tests/test_drive_and_ai_risk.py
+ 1435  source venv/bin/activate && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_secure_chat.py app/tests/test_drive_and_ai_risk.py
+ 1436  source venv/bin/activate && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_rbac.py app/tests/test_rbac_edge_cases.py
+ 1437  source venv/bin/activate && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_rbac.py::test_admin_dashboard_access_by_admin -vv
+ 1438  source venv/bin/activate && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_rbac.py::test_admin_dashboard_access_by_admin --tb=long
+ 1439  source venv/bin/activate && python3 -c 'from passlib.context import CryptContext; ctx = CryptContext(schemes=["bcrypt"]); print(ctx.hash("adminpass"))'
+ 1440  source venv/bin/activate && pip install -r requirements.txt && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_rbac.py app/tests/test_rbac_edge_cases.py app/tests/test_secure_chat.py app/tests/test_drive_and_ai_risk.py
+ 1441  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/frontend
+ 1442  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+ 1443  ./venv/bin/pytest app/tests/test_auth_2fa.py
+ 1444  ./venv/bin/pytest app/tests/test_auth_2fa.py
+ 1445  ./venv/bin/pytest app/tests/test_auth_2fa.py
+ 1446  ./venv/bin/pytest app/tests/test_document_generation.py
+ 1447  ./venv/bin/pytest app/tests/test_document_generation.py
+ 1448  PYTHONPATH=. ./venv/bin/python list_routes.py
+ 1449  ./venv/bin/pytest -s app/tests/test_document_generation.py
+ 1450  ./venv/bin/pytest app/tests/test_document_generation.py
+ 1451  ./venv/bin/pytest app/tests/test_document_generation.py
+ 1452  ./venv/bin/pytest -s app/tests/test_document_generation.py
+ 1453  ./venv/bin/pytest app/tests/test_documents_endpoints.py
+ 1454  ./venv/bin/pytest -s app/tests/test_documents_endpoints.py
+ 1455  ls app/services/ai_document_analysis_service.py
+ 1456  ls -R app/templates/legal_documents/
+ 1457  ./venv/bin/pytest app/tests/test_documents_endpoints.py
+ 1458  ./venv/bin/pytest -s app/tests/test_documents_endpoints.py
+ 1459  ./venv/bin/pytest -s app/tests/test_documents_endpoints.py
+ 1460  ./venv/bin/pytest -s app/tests/test_documents_endpoints.py
+ 1461  rm app/tests/test_document_generation.py doc_gen_debug.txt
+ 1462  ./venv/bin/pytest app/tests/test_documents_endpoints.py
+ 1463  ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+ 1464  lsof -i :8000
+ 1465  ss -tulpn | grep 8000
+ 1466  ss -tulpn | grep -E "3000|3001|5000"
+ 1467  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/frontend
+ 1468  npm run dev
+ 1469  ss -tulpn | grep -E ":5000"
+ 1470  docker-compose run --rm backend pytest app/tests/test_drive_and_ai_risk.py -v
+ 1471  ss -tulpn | grep 5000
+ 1472  ss -tulpn | grep -E ":8000|:8001"
+ 1473  grep -r "8001" frontend
+ 1474  ls -a frontend | grep .env
+ 1475  fuser 8000/tcp
+ 1476  docker ps
+ 1477  ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1478  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1479  ./venv/bin/python3 - <<'EOF'
+ 1480  import sqlite3
+ 1481  conn = sqlite3.connect('sql_app.db')
+ 1482  c = conn.cursor()
+ 1483  c.execute('PRAGMA table_info(users)')
+ 1484  cols = [row[1] for row in c.fetchall()]
+ 1485  print('Existing columns:', cols)
+ 1486  missing = {
+ 1487      'totp_secret': 'VARCHAR',
+ 1488      'is_2fa_enabled': 'BOOLEAN DEFAULT 0',
+ 1489      'failed_login_attempts': 'INTEGER DEFAULT 0',
+ 1490      'lockout_until': 'DATETIME',
+ 1491      'last_login': 'DATETIME',
+ 1492      'facebook_id': 'VARCHAR',
+ 1493  }
+ 1494  for col, coltype in missing.items():
+ 1495      if col not in cols:
+ 1496          try:
+ 1497              c.execute(f'ALTER TABLE users ADD COLUMN {col} {coltype}')
+ 1498              print(f'Added column: {col}')
+ 1499          except Exception as e:
+ 1500              print(f'Skipped {col}: {e}')
+ 1501  conn.commit()
+ 1502  conn.close()
+ 1503  print('Done.')
+ 1504  EOF
+ 1505  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1506  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1507  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1508  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1509  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1510  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1511  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic upgrade head 2>&1 | tail -20
+ 1512  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic current 2>&1 | tail -5
+ 1513  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic heads 2>&1 | tail -5
+ 1514  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic history --indicate-current 2>&1 | tail -20
+ 1515  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic stamp e138cd2452c3 2>&1 | tail -5
+ 1516  ./venv/bin/python3 -c "
+ 1517  import sqlite3
+ 1518  conn = sqlite3.connect('sql_app.db')
+ 1519  c = conn.cursor()
+ 1520  # Check existing columns
+ 1521  c.execute('PRAGMA table_info(users)')
+ 1522  cols = [row[1] for row in c.fetchall()]
+ 1523  print('Existing columns:', cols)
+ 1524  # Add missing columns
+ 1525  missing = {
+ 1526      'totp_secret': 'VARCHAR',
+ 1527      'is_2fa_enabled': 'BOOLEAN DEFAULT 0',
+ 1528      'failed_login_attempts': 'INTEGER DEFAULT 0',
+ 1529      'lockout_until': 'DATETIME',
+ 1530      'last_login': 'DATETIME',
+ 1531      'facebook_id': 'VARCHAR',
+ 1532  }
+ 1533  for col, coltype in missing.items():
+ 1534      if col not in cols:
+ 1535          try:
+ 1536              c.execute(f'ALTER TABLE users ADD COLUMN {col} {coltype}')
+ 1537              print(f'Added column: {col}')
+ 1538          except Exception as e:
+ 1539              print(f'Skipped {col}: {e}')
+ 1540  conn.commit()
+ 1541  conn.close()
+ 1542  print('Done.')
+ 1543  "
+ 1544  curl -s -X POST http://localhost:8001/api/v1/auth/login \
+ 1545    -H "Content-Type: application/json" \
+ 1546    -H "Origin: http://localhost:5000" \
+ 1547    -d '{"email":"admin@example.com","password":"StrongPass123!"}'
+ 1548  pkill python3 2>/dev/null; pkill -f "uvicorn" 2>/dev/null; sleep 1; echo "killed"
+ 1549  mv sql_app.db sql_app.db.bak && DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic upgrade head 2>&1 | tail -6
+ 1550  ps aux | grep -E "alembic|python" | grep -v grep | head -5
+ 1551  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1552  which sqlite3
+ 1553  ps aux | grep -E "python|sqlite" | grep -v grep
+ 1554  ls -la /proc/2534/fd 2>/dev/null | grep sql_app
+ 1555  docker ps --format "{{.ID}} {{.Names}} {{.Ports}}"
+ 1556  docker exec legal_backend curl -s http://localhost:8000/api/health
+ 1557  curl -s http://localhost:8000/api/health
+ 1558  curl -s http://localhost:8000/api/healthz && curl -s http://localhost:8000/
+ 1559  curl -s -X POST http://localhost:8000/api/v1/auth/login \
+ 1560    -H "Content-Type: application/json" \
+ 1561    -d '{"email":"admin@example.com","password":"StrongPass123!"}' \
+ 1562    --max-time 5
+ 1563  ps aux | grep uvicorn | grep -v grep
+ 1564  pkill -f "uvicorn app.main" && sleep 2
+ 1565  pkill -f "uvicorn app.main"
+ 1566  lsof sql_app.db 2>/dev/null || echo "no locks found"
+ 1567  ls -la sql_app.db sql_app.db-wal sql_app.db-shm 2>/dev/null
+ 1568  python3 -c "
+ 1569  import sqlite3, sys
+ 1570  sys.path.insert(0, '.')
+ 1571  conn = sqlite3.connect('sql_app.db', timeout=3)
+ 1572  c = conn.cursor()
+ 1573  c.execute('PRAGMA table_info(users)')
+ 1574  cols = [row[1] for row in c.fetchall()]
+ 1575  print('Cols:', cols)
+ 1576  missing = {'totp_secret':'VARCHAR','is_2fa_enabled':'BOOLEAN DEFAULT 0','failed_login_attempts':'INTEGER DEFAULT 0','lockout_until':'DATETIME','last_login':'DATETIME','facebook_id':'VARCHAR'}
+ 1577  for col, coltype in missing.items():
+ 1578      if col not in cols:
+ 1579          c.execute(f'ALTER TABLE users ADD COLUMN {col} {coltype}')
+ 1580          print('Added:', col)
+ 1581  conn.commit(); conn.close(); print('Done')
+ 1582  "
+ 1583  pkill -f "uvicorn app.main" && sleep 1 && sqlite3 sql_app.db "
+ 1584  ALTER TABLE users ADD COLUMN totp_secret VARCHAR;
+ 1585  ALTER TABLE users ADD COLUMN is_2fa_enabled BOOLEAN DEFAULT 0;
+ 1586  ALTER TABLE users ADD COLUMN failed_login_attempts INTEGER DEFAULT 0;
+ 1587  ALTER TABLE users ADD COLUMN lockout_until DATETIME;
+ 1588  ALTER TABLE users ADD COLUMN last_login DATETIME;
+ 1589  ALTER TABLE users ADD COLUMN facebook_id VARCHAR;
+ 1590  " 2>&1 && echo "Schema updated OK"
+ 1591  npm run dev
+ 1592  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+ 1593  ss -tulpn | grep 5000
+ 1594  curl -s http://localhost:8001/api/health
+ 1595  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1596  fuser -k 8001/tcp
+ 1597  curl -s http://localhost:8001/api/health
+ 1598  curl -X OPTIONS http://localhost:8001/api/v1/auth/login      -H "Origin: http://localhost:5000"      -H "Access-Control-Request-Method: POST"      -v
+ 1599  fuser -k 8001/tcp
+ 1600  curl -X OPTIONS http://localhost:8001/api/v1/auth/login      -H "Origin: http://localhost:5000"      -H "Access-Control-Request-Method: POST"      -v
+ 1601  sleep 2 && curl -X OPTIONS http://localhost:8001/api/v1/auth/login      -H "Origin: http://localhost:5000"      -H "Access-Control-Request-Method: POST"      -v
+ 1602  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001
+ 1603  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1604  fuser -k 8001/tcp
+ 1605  sleep 2 && curl -X OPTIONS http://localhost:8001/api/v1/auth/login      -H "Origin: http://localhost:5000"      -H "Access-Control-Request-Method: POST"      -v
+ 1606  ls -l sql_app.db
+ 1607  fuser -k 8001/tcp
+ 1608  curl -s http://localhost:8001/api/health
+ 1609  curl -s -X POST http://localhost:8001/api/v1/auth/login \
+ 1610    -H "Content-Type: application/json" \
+ 1611    -H "Origin: http://localhost:5000" \
+ 1612    -d '{"email":"admin@example.com","password":"StrongPass123!"}' \
+ 1613    -v 2>&1 | head -40
+ 1614  pkill -f "uvicorn app.main" && sleep 2 && echo killed
+ 1615  curl -s -X POST http://localhost:8001/api/v1/auth/login \
+ 1616    -H "Content-Type: application/json" \
+ 1617    -d '{"email":"admin@example.com","password":"StrongPass123!"}' \
+ 1618    --max-time 10 | python3 -m json.tool 2>&1 | head -20
+ 1619  PGPASSWORD=dev_password psql -h localhost -p 55432 -U postgres -d legal_services_dev -c "\d users" 2>&1 | head -30
+ 1620  docker exec legal_services_db_dev psql -U postgres -d legal_services_dev -c "\d users" 2>&1 | head -35
+ 1621  docker exec legal_services_db_dev sh -c 'psql -U postgres -d legal_services_dev -c "SELECT column_name FROM information_schema.columns WHERE table_name='"'"'users'"'"' ORDER BY ordinal_position" 2>&1'
+ 1622  docker exec legal_services_db_dev psql -U postgres -d legal_services_dev -c "
+ 1623  ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_secret VARCHAR;
+ 1624  ALTER TABLE users ADD COLUMN IF NOT EXISTS is_2fa_enabled BOOLEAN DEFAULT FALSE;
+ 1625  ALTER TABLE users ADD COLUMN IF NOT EXISTS failed_login_attempts INTEGER DEFAULT 0;
+ 1626  ALTER TABLE users ADD COLUMN IF NOT EXISTS lockout_until TIMESTAMP;
+ 1627  " 2>&1
+ 1628  ./venv/bin/python3 -c "import redis.asyncio; help(redis.asyncio.Redis.from_url)" 2>&1 | grep -i timeout | head -10
+ 1629  find . -maxdepth 3 -not -path '*/.*'
+ 1630  find backend/app -maxdepth 2 -not -path '*/.*' && find frontend -maxdepth 2 -not -path '*/.*'
+ 1631  find frontend/src -maxdepth 3 -not -path '*/.*' || find frontend/components -maxdepth 3 -not -path '*/.*'
+ 1632  ls -R backend/app
+ 1633  ls backend/app/models
+ 1634  ls backend/app/api/v1/endpoints
+ 1635  find backend/app -name "case.py"
+ 1636  find backend/app -type d -name "models"
+ 1637  grep -r "class Case" backend/app
+ 1638  ls -R backend/app/db
+ 1639  find frontend/src -name "*Dashboard.tsx"
+ 1640  find . -name "AdminDashboard.tsx" && find . -name "LawyerDashboard.tsx"
+ 1641  grep -r "cerebras" backend/app
+ 1642  ls frontend/src/components/ui/use-toast*
+ 1643  find . -name "use-toast*"
+ 1644  grep -n "const renderCases = () => (" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx
+ 1645  grep -n "const openCase" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx
+ 1646  grep -n "interface Case" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx
+ 1647  grep -n "const \[caseTab" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx
+ 1648  docker --version && docker-compose --version
+ 1649  docker-compose up -d --build
+ 1650  docker-compose logs legal_backend | tail -n 50
+ 1651  docker-compose logs backend | tail -n 50
+ 1652  grep -n "sidebar" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx | head -n 20
+ 1653  docker logs legal_services_db_dev
+ 1654  docker compose -f docker-compose.dev.yml down && docker compose -f docker-compose.dev.yml up -d --build
+ 1655  docker exec legal_services_backend_dev alembic upgrade head
+ 1656  docker exec legal_services_backend_dev python -c "from app.db.database import SessionLocal; from app.models.user import User; from app.models.case import Case; from app.models.payment import Payment; from app.models.notification import Notification; s=SessionLocal(); print([u.email for u in s.query(User).all()])"
+ 1657  docker exec legal_services_backend_dev python -c "
+ 1658  from app.db.database import SessionLocal
+ 1659  from app.models.user import User, UserRole
+ 1660  from app.services.auth_service import AuthService
+ 1661  from datetime import datetime
+ 1662  import asyncio
+ 1663  async def seed():
+ 1664      db = SessionLocal()
+ 1665      admin_email = 'admin@example.com'
+ 1666      admin_password = 'StrongPass123!'
+ 1667      operator_email = 'operator@example.com'
+ 1668      operator_password = 'StrongPass123!'
+ 1669      
+ 1670      # Use exact type from SQLAlchemy model
+ 1671      admin = db.query(User).filter(User.email == admin_email).first()
+ 1672      if not admin:
+ 1673          admin = User(email=admin_email, first_name='Admin')
+ 1674          db.add(admin)
+ 1675      admin.role = UserRole.ADMIN
+ 1676      admin.is_active = True
+ 1677      admin.is_verified = True
+ 1678      admin.hashed_password = AuthService.get_password_hash(admin_password)
+ 1679      
+ 1680      oper = db.query(User).filter(User.email == operator_email).first()
+ 1681      if not oper:
+ 1682          oper = User(email=operator_email, first_name='Operator')
+ 1683          db.add(oper)
+ 1684      oper.role = UserRole.OPERATOR
+ 1685      oper.is_active = True
+ 1686      oper.is_verified = True
+ 1687      oper.hashed_password = AuthService.get_password_hash(operator_password)
+ 1688      
+ 1689      db.commit()
+ 1690      print('SUCCESS')
+ 1691  asyncio.run(seed())
+ 1692  "
+ 1693  bun run lint
+ 1694  cd frontend/
+ 1695  bun run lint
+ 1696  sudo bun run lint
+ 1697  sudo bun run lint:fix
+ 1698  sudo apt install build-essential pkg-config
+ 1699  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+ 1700  rustc --version
+ 1701  cargo --version
+ 1702  curl -LsSf https://raw.githubusercontent.com/openagen/zeroclaw/main/scripts/install.sh | bash
+ 1703  export PATH="$HOME/.cargo/bin:$PATH"
+ 1704  zeroclaw onboard --interactive
+ 1705  xport GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1706  export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1707  zeroclaw channel start
+ 1708  cargo build --features whatsapp-web
+ 1709  zeroclaw onboard --force
+ 1710  cd ~/.zeroclaw/config.toml
+ 1711  cd ~/.zeroclaw
+ 1712  ls
+ 1713  nano config.toml 
+ 1714  sudo export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1715  export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1716  nano config.toml 
+ 1717  zeroclaw onboard --channels-only
+ 1718  nano config.toml 
+ 1719  vim conifg.toml
+ 1720  zeroclaw onboard --channels-only
+ 1721  zeroclaw agent -m "Hello, ZeroClaw!"
+ 1722  zeroclaw onboard --interactive
+ 1723  zeroclaw channel start
+ 1724  zeroclaw onboard
+ 1725  zeroclaw status
+ 1726  export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1727  source ~/.bashrc
+ 1728  zeroclaw onboard --interactive
+ 1729  cd ~/.zeroclaw
+ 1730  zeroclaw status
+ 1731  export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1732  nano ~/.bashrc
+ 1733  zeroclaw agent -m "Hello, ZeroClaw!"
+ 1734  zeroclaw daemon
+ 1735  zeroclaw doctor
+ 1736  sudo mkdir -p /etc/apt/keyrings
+ 1737  curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg |   sudo gpg --dearmor --yes -o /etc/apt/keyrings/antigravity-repo-key.gpg
+ 1738  echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" |   sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
+ 1739  sudo apt update
+ 1740  sudo apt install antigravity
+ 1741  cd frontend/
+ 1742  bun run coverage
+ 1743  history > historia.txt

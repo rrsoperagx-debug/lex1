@@ -1,0 +1,70 @@
+server {
+    listen 0.0.0.0:${PORT};
+    http2 on;
+    server_name _;
+
+    # Security Headers
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com 'sha256-l0IHPvf8eV52c9mPJymShDKYQmoP/YyzUHeE31FDYIs='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.googleapis.com;" always;
+    add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" always;
+    add_header X-Frame-Options "DENY" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "no-referrer-when-downgrade" always;
+    add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()" always;
+
+    # Gzip Compression
+    gzip on;
+    gzip_static on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml application/json application/javascript application/xml+rss application/atom+xml image/svg+xml;
+
+    # Frontend static files
+    location / {
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+        try_files $uri $uri/ /index.html;
+        expires -1;
+        
+        location ~* \.(js|css|png|jpg|jpeg|webp|svg|woff2)$ {
+            expires 1y;
+            add_header Cache-Control "public, immutable";
+        }
+    }
+
+    # API Proxy (Option 2: Reverse Proxy for shared domain)
+    # Ta sekcja pozwala na używanie relatywnych linków /api/v1/... na froncie.
+    location /api/ {
+        # Dynamiczne rozwiązanie nazwy hosta przy każdym żądaniu (zapobiega 502/crash przy starcie)
+        resolver 127.0.0.11 valid=30s ipv6=off;
+        
+        # Przechwycenie zmiennej z Railway lub Dockera (np. https://backend.up.railway.app)
+        set $backend_upstream "${BACKEND_URL}";
+
+        # Przekierowanie do backendu (doklejamy URI, bo używamy zmiennej)
+        proxy_pass $backend_upstream$request_uri;
+        
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        
+        # Na Railway używamy $proxy_host, aby pasowało do nazwy hosta serwisu docelowego
+        proxy_set_header Host $proxy_host;
+        
+        proxy_cache_bypass $http_upgrade;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Timeouty dla długich zapytań AI / PDF Generation
+        proxy_connect_timeout 180s;
+        proxy_send_timeout 180s;
+        proxy_read_timeout 180s;
+    }
+
+    # Health check
+    location /healthz {
+        access_log off;
+        return 200 "OK";
+    }
+}

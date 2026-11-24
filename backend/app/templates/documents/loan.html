@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Umowa Pożyczki</title>
+</head>
+<body>
+    <h1>UMOWA POŻYCZKI</h1>
+    <p>
+        <strong>Pożyczkodawca:</strong> {{ lender.name }}<br>
+        <strong>Pożyczkobiorca:</strong> {{ borrower.name }}
+    </p>
+    
+    <h2>§ 1. Kwota pożyczki</h2>
+    <p>
+        Pożyczkodawca udziela Pożyczkobiorcy pożyczki w kwocie {{ loan.amount }} PLN.
+    </p>
+
+    <h2>§ 2. Spłata</h2>
+    <p>
+        Pożyczkobiorca zobowiązuje się do spłaty pożyczki w {{ loan.installments_count }} ratach,
+        płatnych do {{ loan.repayment_day }} dnia każdego miesiąca.
+    </p>
+</body>
+</html>

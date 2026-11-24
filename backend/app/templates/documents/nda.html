@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Umowa o Zachowaniu Poufności</title>
+    <style>
+        body { font-family: DejaVu Sans, sans-serif; line-height: 1.5; font-size: 11pt; }
+        h1 { text-align: center; font-size: 14pt; }
+        .date-place { text-align: right; margin-bottom: 20px; }
+        .party { margin-bottom: 15px; }
+        .signature { margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h1>UMOWA O ZACHOWANIU POUFNOŚCI (NDA)</h1>
+    <div class="date-place">
+        <p>zawarta w dniu {{ agreement_date }} w {{ place }}</p>
+    </div>
+
+    <div class="party">
+        <strong>Strona Ujawniająca:</strong><br>
+        {{ disclosing_party.name }}<br>
+        z siedzibą w {{ disclosing_party.address }}<br>
+        NIP: {{ disclosing_party.nip }}
+    </div>
+
+    <div class="party">
+        <strong>Strona Otrzymująca:</strong><br>
+        {{ receiving_party.name }}<br>
+        z siedzibą w {{ receiving_party.address }}<br>
+        NIP: {{ receiving_party.nip }}
+    </div>
+
+    <h2>§ 1. Definicja Informacji Poufnych</h2>
+    <p>
+        Informacje Poufne oznaczają wszelkie informacje techniczne, handlowe, finansowe,
+        organizacyjne lub inne, dotyczące Strony Ujawniającej, które zostały przekazane
+        Stronie Otrzymującej w formie pisemnej, ustnej lub elektronicznej.
+    </p>
+
+    <h2>§ 2. Zobowiązanie do zachowania poufności</h2>
+    <p>
+        Strona Otrzymująca zobowiązuje się do zachowania w ścisłej tajemnicy wszelkich
+        Informacji Poufnych przez okres {{ confidentiality_period_years }} lat od daty
+        zawarcia niniejszej umowy.
+    </p>
+    
+    <h2>§ 3. Postanowienia końcowe</h2>
+    <p>
+        Wszelkie zmiany niniejszej umowy wymagają formy pisemnej pod rygorem nieważności.
+        W sprawach nieuregulowanych niniejszą umową mają zastosowanie przepisy Kodeksu Cywilnego.
+    </p>
+
+    <div class="signature">
+        <div style="float: left; width: 45%; text-align: center;">
+            <p>_________________________</p>
+            <p>Strona Ujawniająca</p>
+        </div>
+        <div style="float: right; width: 45%; text-align: center;">
+            <p>_________________________</p>
+            <p>Strona Otrzymująca</p>
+        </div>
+    </div>
+</body>
+</html>

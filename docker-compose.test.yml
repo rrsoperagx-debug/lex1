@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  test_db:
+    image: postgres:15-alpine
+    container_name: legal_test_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: lex_test
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  test_redis:
+    image: redis:alpine
+    container_name: legal_test_redis
+
+  test_backend:
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+    container_name: legal_test_backend
+    depends_on:
+      test_db:
+        condition: service_healthy
+      test_redis:
+        condition: service_started
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@test_db:5432/lex_test
+      REDIS_URL: redis://test_redis:6379/0
+      SECRET_KEY: test_secret
+      ENVIRONMENT: TESTING
+      MOLLIE_API_KEY: test_xxxxxxxxxxxxxx
+      APP_BASE_URL: http://test_frontend:80
+    command: >
+      sh -c "
+        python tests/seed_test_db.py &&
+        pytest tests/ --cov=app --cov-report=term-missing
+      "
+
+  test_frontend_e2e:
+    build:
+      context: ./frontend
+      dockerfile: frontend.dockerfile
+    container_name: legal_test_frontend
+    depends_on:
+      test_backend:
+        condition: service_started
+    environment:
+      BACKEND_URL: http://test_backend:8000
+      PORT: 80
+
+  test_runner_e2e:
+    image: mcr.microsoft.com/playwright:v1.58.2-jammy
+    container_name: legal_test_runner_e2e
+    depends_on:
+      test_frontend_e2e:
+        condition: service_started
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    environment:
+      BASE_URL: http://legal_test_frontend:80
+      CI: "true"
+    command: >
+      sh -c "
+        npm install --legacy-peer-deps &&
+        npx playwright install --with-deps chromium &&
+        (npx playwright test || true) &&
+        sleep infinity
+      "

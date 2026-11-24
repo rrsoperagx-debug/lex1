@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Umowa Zlecenie</title>
+</head>
+<body>
+    <h1>UMOWA ZLECENIE</h1>
+    <p>
+        <strong>Zleceniodawca:</strong> {{ client.name }}<br>
+        <strong>Zleceniobiorca:</strong> {{ contractor.name }}
+    </p>
+
+    <h2>§ 1. Przedmiot umowy</h2>
+    <p>
+        Zleceniodawca zleca, a Zleceniobiorca zobowiązuje się do wykonania następujących czynności:
+        {{ mandate.subject }}.
+    </p>
+
+    <h2>§ 2. Wynagrodzenie</h2>
+    <p>
+        Za wykonanie przedmiotu umowy, Zleceniobiorcy przysługuje wynagrodzenie w kwocie
+        {{ mandate.remuneration }} PLN.
+    </p>
+</body>
+</html>

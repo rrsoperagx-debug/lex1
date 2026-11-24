@@ -1,0 +1,1000 @@
+  746  const src = fs.readFileSync('node_modules/sonner/dist/index.js', 'utf8');
+  747  // find 'role' in source
+  748  const matches = src.match(/role[^,]{0,40}/g);
+  749  if(matches) console.log([...new Set(matches)].slice(0, 20).join('\n'));
+  750  "
+  751  mkdir -p /home/rr/.gemini/antigravity/scratch/voxel-game && ls /home/rr/.gemini/antigravity/scratch/voxel-game
+  752  cd /home/rr/.gemini/antigravity/scratch/voxel-game 
+  753  ls
+  754  cd ..
+  755  ls
+  756  cd /home/rr/.gemini/antigravity/scratch
+  757  mkdir -p /home/rr/.gemini/antigravity/scratch/voxel-game
+  758  python3 -m http.server 8080
+  759  cd /home/rr/.gemini/antigravity/scratch/voxel-game
+  760  source /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.venv/bin/activate
+  761  mkdir -p /home/rr/.gemini/antigravity/scratch/voxel-game && cd /home/rr/.gemini/antigravity/scratch/voxel-game && npx -y create-vite@latest --help 2>&1 | head -40
+  762  node server.js
+  763  node server.js
+  764  cd /home/rr/.gemini/antigravity/scratch
+  765  cd /home/rr/.gemini/antigravity/scratch/voxel-game
+  766  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npx -y create-vite@latest ./ --template vanilla --no-interactive && npm install three simplex-noise
+  767  ls /home/rr/.gemini/antigravity/scratch/voxel-game/
+  768  mkdir -p /home/rr/.gemini/antigravity/scratch/voxel-game/src
+  769  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npm install 2>&1
+  770  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npm run dev 2>&1
+  771  npm install localforage ws
+  772  npm run dev
+  773  pkill -f "vite" ; pkill -f "node server"; sleep 1 && node server.js &
+  774  npm run dev
+  775  node server.js
+  776  pkill node && node server.js
+  777  npm run build
+  778  npm run dev
+  779  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npm install better-sqlite3 @types/better-sqlite3 2>&1 | tail -5
+  780  cd /home/rr/.gemini/antigravity/scratch/voxel-game && node server.js & sleep 2 && curl -I http://localhost:8080 2>&1 || echo "Server started"
+  781  cd /home/rr/.gemini/antigravity/scratch/voxel-game && npx vite --port 3000 --host 2>&1 | tee vite_output.txt & sleep 3 && grep "Local:" vite_output.txt
+  782  cat /home/rr/.gemini/antigravity/scratch/voxel-game/vite_output.txt
+  783  cat /home/rr/.gemini/antigravity/scratch/voxel-game/vite_output.txt
+  784  npm run test:e2e -- e2e/document-flow.spec.ts
+  785  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+  786  docker exec legal_backend python3 -c "
+  787  from app.db.session import engine
+  788  print('DB URL:', str(engine.url)[:50])
+  789  " 2>&1 | head -5
+  790  pytest
+  791  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+  792  docker ps
+  793  grep -r "modelDistribution" .
+  794  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+  795  grep -r "modelDistribution" . | grep -v "node_modules" | grep -v "venv"
+  796  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+  797  grep -r "modelDistribution" . | grep -v "node_modules" | grep -v "dist" | grep -v ".git"
+  798  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+  799  pytest --version && pip list | grep playwright
+  800  E2E_BASE_URL=http://localhost pytest tests/e2e/test_user_flows.py
+  801  docker exec -e E2E_BASE_URL=http://frontend legal_backend pytest -p no:warnings tests/e2e/test_user_flows.py
+  802  docker exec -e E2E_BASE_URL=http://frontend legal_backend pytest -p no:warnings tests/e2e/test_user_flows.py::test_registration_validation_and_success
+  803  docker exec legal_backend curl -I http://frontend
+  804  docker exec legal_backend python -c "import urllib.request; print(urllib.request.urlopen('http://frontend').getcode())"
+  805  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/components/admin/sections/
+  806  grep -r "model_distribution" .
+  807  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+  808  grep -ri "modelDistrib" . | grep -v "node_modules" | grep -v "dist"
+  809  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/dist
+  810  grep -r "modelDistribution" .
+  811  grep -r "model_distribution" .
+  812  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+  813  docker exec legal_db psql -U lexuser -d lexdb -c "SELECT email, is_superuser, is_active FROM \"user\" WHERE email='admin@lexportal.pl';" 2>&1 && echo "---" && docker exec legal_db psql -U lexuser -d lexdb -c "SELECT COUNT(*) as audit_count FROM audit_log;" 2>&1
+  814  docker exec legal_db psql -U postgres -d lexdb -c "SELECT email, is_superuser, is_active FROM \"user\" WHERE email='admin@lexportal.pl';" 2>&1 || docker exec legal_db psql -U postgres -l 2>&1 | head -10
+  815  docker exec legal_db psql -U postgres -d lexportal -c "SELECT email, is_superuser, is_active FROM \"user\" WHERE email='admin@lexportal.pl';" 2>&1 && echo "---AUDIT---" && docker exec legal_db psql -U postgres -d lexportal -c "SELECT COUNT(*) as audit_count FROM audit_log;" 2>&1 && echo "---SETTINGS---" && docker exec legal_db psql -U postgres -d lexportal -c "SELECT key, value FROM system_setting LIMIT 5;" 2>&1
+  816  # Login using form data (FastAPI OAuth2 format)
+  817  RESPONSE=$(curl -s -X POST http://localhost:8000/api/v1/auth/login \
+  818    -H "Content-Type: application/x-www-form-urlencoded" \
+  819    -d "username=admin@lexportal.pl&password=admin123")
+  820  echo "Login response: $RESPONSE" | head -5
+  821  TOKEN=$(echo $RESPONSE | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('access_token',''))" 2>/dev/null)
+  822  if [ -z "$TOKEN" ]; then
+  823    echo "Trying JSON login..."
+  824    RESPONSE=$(curl -s -X POST http://localhost:8000/api/v1/auth/login/json \
+  825      -H "Content-Type: application/json" \
+  826      -d '{"email":"admin@lexportal.pl","password":"admin123"}')
+  827    TOKEN=$(echo $RESPONSE | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('access_token',''))" 2>/dev/null)
+  828  fi
+  829  echo "Token: ${TOKEN:0:50}..."
+  830  echo ""
+  831  echo "=== AUDIT LOGS (5 latest) ==="
+  832  curl -s "http://localhost:8000/api/v1/audit/logs?page=1&size=5" \
+  833    -H "Authorization: Bearer $TOKEN" | python3 -c "
+  834  import sys, json
+  835  d = json.load(sys.stdin)
+  836  print(f'Total: {d.get(\"total\")}, Items: {len(d.get(\"items\",[]))}')
+  837  for i in d.get('items', [])[:5]:
+  838      print(f'  {i[\"action\"]:30} | {i[\"actor_name\"]:20} | {i[\"status\"]} | {i[\"ip_address\"]}')
+  839  " 2>&1
+  840  echo ""
+  841  echo "=== CONFIG STATUS ==="
+  842  curl -s "http://localhost:8000/api/v1/config/status" \
+  843    -H "Authorization: Bearer $TOKEN" | python3 -m json.tool 2>&1
+  844  # Try different auth endpoints
+  845  curl -sv "http://localhost:8000/api/v1/auth/login" 2>&1 | grep "< HTTP\|Allow\|detail" | head -5
+  846  echo "---"
+  847  # Try to list auth routes
+  848  curl -s "http://localhost:8000/openapi.json" | python3 -c "
+  849  import sys,json
+  850  d=json.load(sys.stdin)
+  851  auth_paths = {k:v for k,v in d['paths'].items() if 'auth' in k.lower()}
+  852  for p,v in auth_paths.items():
+  853      methods = list(v.keys())
+  854      print(f'{methods} {p}')
+  855  " 2>&1 | head -20
+  856  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+  857  docker exec -e E2E_BASE_URL=http://frontend legal_backend pytest -p no:warnings tests/e2e/test_user_flows.py
+  858  docker-compose ps
+  859  grep -nC 5 "Masz" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 20
+  860  grep -n "Masz" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  861  sed -n '850,900p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  862  sed -n '860,880p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  863  sed -n '866p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | xxd
+  864  sed -i 's/ - /-/g' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  865  sed -n '3531p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | xxd
+  866  grep -o "{" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l; grep -o "}" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l
+  867  grep -o "(" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l; grep -o ")" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l
+  868  grep -o "\`" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | wc -l
+  869  sed -n '1060,1080p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  870  grep -nC 5 "\$" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 50
+  871  grep -nF "$" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 50
+  872  sed -n '922p' /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | xxd
+  873  grep -n "handleLogout" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  874  grep -n "handleMarkAllRead" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  875  grep -nC 10 "Powiadomienia" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 100
+  876  grep -n "handleExportPDF" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  877  netstat -tunlp | grep :8000
+  878  curl http://localhost:8000/health
+  879  curl http://localhost:8000/
+  880  cd frontend && npx playwright test e2e/happy-path.spec.ts e2e/navigation.spec.ts
+  881  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+  882  grep -n "class Notification" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/db/models.py
+  883  grep -n "activeView ===" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  884  grep -i "AI" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 20
+  885  find . -name "AdminDashboard.tsx"
+  886  find . -name "AIOptimizerDashboard.tsx"
+  887  grep -n "useState<" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 20
+  888  grep -n "const \[activeView" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  889  grep "toast" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  890  tail -n 20 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  891  grep -n "^};" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  892  grep -n "};" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 100
+  893  grep -nC 5 "export default ClientDashboard" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx
+  894  grep -n "^  };" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | head -n 50
+  895  grep -n "activeView ===" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/ClientDashboard.tsx | tail -n 20
+  896  tail -n 60 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/api/v1/endpoints/ai.py
+  897  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+  898  cat /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/vitest.ai-benchmark.config.ts 2>/dev/null || echo "FILE_NOT_FOUND"
+  899  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && npm run test:ai-benchmark 2>&1
+  900  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && BASE_URL=http://localhost:8000 npm run test:ai-benchmark 2>&1 | tail -n 40
+  901  grep -n "BASE_URL\|API_URL" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/tests/ai_benchmark/orchestrator_tiers.test.ts | head -10
+  902  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend && node -e "
+  903  const BASE_URL = (process.env.BASE_URL) ? process.env.BASE_URL : 'http://localhost:8000';
+  904  const API_URL = BASE_URL + '/api/v1/ai/analyze-case';
+  905  console.log('BASE_URL:', BASE_URL);
+  906  console.log('API_URL:', API_URL);
+  907  "
+  908  git branch
+  909  tail -n 100 _docs/ToDo.txt
+  910  find . -maxdepth 4 -mmin -1440 -not -path '*/.*'
+  911  netstat -tunlp | grep -E ":3000|:8000"
+  912  ls -R frontend/src
+  913  mkdir -p frontend/src/components/admin && cp frontend/components/admin/AIOptimizerDashboard.tsx frontend/src/components/admin/AIResourceOptimizer.tsx && rm frontend/components/admin/AIOptimizerDashboard.tsx
+  914  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+  915  npx playwright test e2e/ai-optimizer.spec.ts
+  916  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/db
+  917  grep -n "class ChatMessage" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app/db/models.py
+  918  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+  919  npx playwright test frontend/e2e/chat.spec.ts frontend/e2e/template-fixer.spec.ts
+  920  npx playwright test frontend/e2e/chat.spec.ts frontend/e2e/template-fixer.spec.ts
+  921  npx playwright test frontend/e2e/chat.spec.ts
+  922  curl -I http://localhost:3000/admin
+  923  npx playwright test frontend/e2e/chat.spec.ts --reporter=list
+  924  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+  925  python3 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/stress_test_ddos.py > /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/stress_log.txt 2>&1
+  926  ps aux | grep uvicorn
+  927  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/app
+  928  uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --log-level debug
+  929  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+  930  uvicorn app.main:app --host 0.0.0.0 --port 8000 --log-level debug
+  931  /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/.venv/bin/python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --log-level debug
+  932  python3 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/test_encryption_service.py
+  933  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+  934  npx playwright test frontend/e2e/chat.spec.ts --reporter=line
+  935  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+  936  rm /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/e2e/chat.spec.ts /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/e2e/template-fixer.spec.ts /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/test_encryption_service.py /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/stress_test_ddos.py /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/stress_log.txt
+  937  npx playwright test e2e/ai-optimizer.spec.ts
+  938  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+  939  ps aux | grep playwright
+  940  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+  941  npx playwright test e2e/ai-optimizer.spec.ts
+  942  python3 /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/tests/test_encryption_service.py
+  943  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+  944  npx playwright test frontend/e2e/chat.spec.ts
+  945  cd /home/rr/.gemini/antigravity/scratch/voxel-game/
+  946  node server.js
+  947  cd /home/rr/.gemini/antigravity/scratch/voxel-game/
+  948  node server.js
+  949  npm run build
+  950  npm run build
+  951  npm run build
+  952  npm run build
+  953  npm run build
+  954  npm run build
+  955  npm run build
+  956  npm run build
+  957  npm run build
+  958  npm run build
+  959  npm run build
+  960  cd frontend/
+  961  npm install @radix-ui/react-slot
+  962  cd frontend/
+  963  npm run dev
+  964  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/frontend
+  965  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+  966  python3 -m pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  967  ls -la | grep venv
+  968  python -m pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  969  docker ps
+  970  docker exec legal_backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  971  docker exec legal_backend ls -la app/tests
+  972  docker exec legal_backend ls -la
+  973  docker cp app/tests/test_secure_chat.py legal_backend:/app/app/tests/test_secure_chat.py || docker cp app/tests/test_secure_chat.py legal_backend:/app/tests/test_secure_chat.py
+  974  docker cp app/tests/test_cruds_regression.py legal_backend:/app/tests/test_cruds_regression.py && docker cp app/tests/test_drive_and_ai_risk.py legal_backend:/app/tests/test_drive_and_ai_risk.py && docker exec legal_backend pytest tests/test_secure_chat.py tests/test_cruds_regression.py tests/test_drive_and_ai_risk.py -v
+  975  docker exec -e PYTHONPATH=/app legal_backend pytest tests/test_secure_chat.py tests/test_cruds_regression.py tests/test_drive_and_ai_risk.py -v
+  976  docker exec legal_backend ls -la app
+  977  /bin/bash -c "source .venv/bin/activate && pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v"
+  978  docker inspect legal_backend --format '{{json .Mounts}}'
+  979  docker-compose run --build --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  980  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  981  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  982  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  983  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  984  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  985  echo "google-api-python-client==2.118.0\ngoogle-auth-httplib2==0.2.0\ngoogle-auth-oauthlib==1.2.0" >> requirements.txt
+  986  docker-compose build backend
+  987  docker-compose run --rm backend pytest app/tests/test_drive_and_ai_risk.py::test_google_drive_mock_upload -v
+  988  docker-compose run --rm backend pytest app/tests/test_drive_and_ai_risk.py::test_google_drive_mock_upload -v
+  989  docker-compose build backend
+  990  docker-compose run --rm backend pytest app/tests/test_drive_and_ai_risk.py::test_google_drive_mock_upload -v
+  991  ls -a /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/.env
+  992  find /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02 -name "*.py" | grep "ai"
+  993  docker-compose run --rm backend pytest app/tests/test_secure_chat.py app/tests/test_cruds_regression.py app/tests/test_drive_and_ai_risk.py -v
+  994  echo "pyotp==2.9.0\nqrcode==7.4.2" >> requirements.txt
+  995  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/app
+  996  find . -name "audit.py"
+  997  grep -r "\.websocket" .
+  998  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+  999  ls app/core/encryption.py app/services/ai_risk.py app/services/google_drive.py
+ 1000  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/app
+ 1001  grep -r "get_current_active_superuser" .
+ 1002  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+ 1003  pytest app/tests/test_secure_chat.py app/tests/test_drive_and_ai_risk.py
+ 1004  pip list | grep -E "fastapi|pydantic|pytest"
+ 1005  pip install -r requirements.txt
+ 1006  python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+ 1007  source venv/bin/activate && pytest app/tests/test_secure_chat.py app/tests/test_drive_and_ai_risk.py
+ 1008  source venv/bin/activate && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_secure_chat.py app/tests/test_drive_and_ai_risk.py
+ 1009  source venv/bin/activate && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_rbac.py app/tests/test_rbac_edge_cases.py
+ 1010  source venv/bin/activate && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_rbac.py::test_admin_dashboard_access_by_admin -vv
+ 1011  source venv/bin/activate && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_rbac.py::test_admin_dashboard_access_by_admin --tb=long
+ 1012  source venv/bin/activate && python3 -c 'from passlib.context import CryptContext; ctx = CryptContext(schemes=["bcrypt"]); print(ctx.hash("adminpass"))'
+ 1013  source venv/bin/activate && pip install -r requirements.txt && export PYTHONPATH=$PYTHONPATH:. && pytest app/tests/test_rbac.py app/tests/test_rbac_edge_cases.py app/tests/test_secure_chat.py app/tests/test_drive_and_ai_risk.py
+ 1014  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/frontend
+ 1015  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+ 1016  ./venv/bin/pytest app/tests/test_auth_2fa.py
+ 1017  ./venv/bin/pytest app/tests/test_auth_2fa.py
+ 1018  ./venv/bin/pytest app/tests/test_auth_2fa.py
+ 1019  ./venv/bin/pytest app/tests/test_document_generation.py
+ 1020  ./venv/bin/pytest app/tests/test_document_generation.py
+ 1021  PYTHONPATH=. ./venv/bin/python list_routes.py
+ 1022  ./venv/bin/pytest -s app/tests/test_document_generation.py
+ 1023  ./venv/bin/pytest app/tests/test_document_generation.py
+ 1024  ./venv/bin/pytest app/tests/test_document_generation.py
+ 1025  ./venv/bin/pytest -s app/tests/test_document_generation.py
+ 1026  ./venv/bin/pytest app/tests/test_documents_endpoints.py
+ 1027  ./venv/bin/pytest -s app/tests/test_documents_endpoints.py
+ 1028  ls app/services/ai_document_analysis_service.py
+ 1029  ls -R app/templates/legal_documents/
+ 1030  ./venv/bin/pytest app/tests/test_documents_endpoints.py
+ 1031  ./venv/bin/pytest -s app/tests/test_documents_endpoints.py
+ 1032  ./venv/bin/pytest -s app/tests/test_documents_endpoints.py
+ 1033  ./venv/bin/pytest -s app/tests/test_documents_endpoints.py
+ 1034  rm app/tests/test_document_generation.py doc_gen_debug.txt
+ 1035  ./venv/bin/pytest app/tests/test_documents_endpoints.py
+ 1036  ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+ 1037  lsof -i :8000
+ 1038  ss -tulpn | grep 8000
+ 1039  ss -tulpn | grep -E "3000|3001|5000"
+ 1040  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02/frontend
+ 1041  npm run dev
+ 1042  ss -tulpn | grep -E ":5000"
+ 1043  docker-compose run --rm backend pytest app/tests/test_drive_and_ai_risk.py -v
+ 1044  ss -tulpn | grep 5000
+ 1045  ss -tulpn | grep -E ":8000|:8001"
+ 1046  grep -r "8001" frontend
+ 1047  ls -a frontend | grep .env
+ 1048  fuser 8000/tcp
+ 1049  docker ps
+ 1050  ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1051  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1052  ./venv/bin/python3 - <<'EOF'
+ 1053  import sqlite3
+ 1054  conn = sqlite3.connect('sql_app.db')
+ 1055  c = conn.cursor()
+ 1056  c.execute('PRAGMA table_info(users)')
+ 1057  cols = [row[1] for row in c.fetchall()]
+ 1058  print('Existing columns:', cols)
+ 1059  missing = {
+ 1060      'totp_secret': 'VARCHAR',
+ 1061      'is_2fa_enabled': 'BOOLEAN DEFAULT 0',
+ 1062      'failed_login_attempts': 'INTEGER DEFAULT 0',
+ 1063      'lockout_until': 'DATETIME',
+ 1064      'last_login': 'DATETIME',
+ 1065      'facebook_id': 'VARCHAR',
+ 1066  }
+ 1067  for col, coltype in missing.items():
+ 1068      if col not in cols:
+ 1069          try:
+ 1070              c.execute(f'ALTER TABLE users ADD COLUMN {col} {coltype}')
+ 1071              print(f'Added column: {col}')
+ 1072          except Exception as e:
+ 1073              print(f'Skipped {col}: {e}')
+ 1074  conn.commit()
+ 1075  conn.close()
+ 1076  print('Done.')
+ 1077  EOF
+ 1078  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1079  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1080  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1081  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1082  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1083  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1084  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic upgrade head 2>&1 | tail -20
+ 1085  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic current 2>&1 | tail -5
+ 1086  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic heads 2>&1 | tail -5
+ 1087  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic history --indicate-current 2>&1 | tail -20
+ 1088  DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic stamp e138cd2452c3 2>&1 | tail -5
+ 1089  ./venv/bin/python3 -c "
+ 1090  import sqlite3
+ 1091  conn = sqlite3.connect('sql_app.db')
+ 1092  c = conn.cursor()
+ 1093  # Check existing columns
+ 1094  c.execute('PRAGMA table_info(users)')
+ 1095  cols = [row[1] for row in c.fetchall()]
+ 1096  print('Existing columns:', cols)
+ 1097  # Add missing columns
+ 1098  missing = {
+ 1099      'totp_secret': 'VARCHAR',
+ 1100      'is_2fa_enabled': 'BOOLEAN DEFAULT 0',
+ 1101      'failed_login_attempts': 'INTEGER DEFAULT 0',
+ 1102      'lockout_until': 'DATETIME',
+ 1103      'last_login': 'DATETIME',
+ 1104      'facebook_id': 'VARCHAR',
+ 1105  }
+ 1106  for col, coltype in missing.items():
+ 1107      if col not in cols:
+ 1108          try:
+ 1109              c.execute(f'ALTER TABLE users ADD COLUMN {col} {coltype}')
+ 1110              print(f'Added column: {col}')
+ 1111          except Exception as e:
+ 1112              print(f'Skipped {col}: {e}')
+ 1113  conn.commit()
+ 1114  conn.close()
+ 1115  print('Done.')
+ 1116  "
+ 1117  curl -s -X POST http://localhost:8001/api/v1/auth/login \
+ 1118    -H "Content-Type: application/json" \
+ 1119    -H "Origin: http://localhost:5000" \
+ 1120    -d '{"email":"admin@example.com","password":"StrongPass123!"}'
+ 1121  pkill python3 2>/dev/null; pkill -f "uvicorn" 2>/dev/null; sleep 1; echo "killed"
+ 1122  mv sql_app.db sql_app.db.bak && DATABASE_URL=sqlite:///./sql_app.db ./venv/bin/alembic upgrade head 2>&1 | tail -6
+ 1123  ps aux | grep -E "alembic|python" | grep -v grep | head -5
+ 1124  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1125  which sqlite3
+ 1126  ps aux | grep -E "python|sqlite" | grep -v grep
+ 1127  ls -la /proc/2534/fd 2>/dev/null | grep sql_app
+ 1128  docker ps --format "{{.ID}} {{.Names}} {{.Ports}}"
+ 1129  docker exec legal_backend curl -s http://localhost:8000/api/health
+ 1130  curl -s http://localhost:8000/api/health
+ 1131  curl -s http://localhost:8000/api/healthz && curl -s http://localhost:8000/
+ 1132  curl -s -X POST http://localhost:8000/api/v1/auth/login \
+ 1133    -H "Content-Type: application/json" \
+ 1134    -d '{"email":"admin@example.com","password":"StrongPass123!"}' \
+ 1135    --max-time 5
+ 1136  ps aux | grep uvicorn | grep -v grep
+ 1137  pkill -f "uvicorn app.main" && sleep 2
+ 1138  pkill -f "uvicorn app.main"
+ 1139  lsof sql_app.db 2>/dev/null || echo "no locks found"
+ 1140  ls -la sql_app.db sql_app.db-wal sql_app.db-shm 2>/dev/null
+ 1141  python3 -c "
+ 1142  import sqlite3, sys
+ 1143  sys.path.insert(0, '.')
+ 1144  conn = sqlite3.connect('sql_app.db', timeout=3)
+ 1145  c = conn.cursor()
+ 1146  c.execute('PRAGMA table_info(users)')
+ 1147  cols = [row[1] for row in c.fetchall()]
+ 1148  print('Cols:', cols)
+ 1149  missing = {'totp_secret':'VARCHAR','is_2fa_enabled':'BOOLEAN DEFAULT 0','failed_login_attempts':'INTEGER DEFAULT 0','lockout_until':'DATETIME','last_login':'DATETIME','facebook_id':'VARCHAR'}
+ 1150  for col, coltype in missing.items():
+ 1151      if col not in cols:
+ 1152          c.execute(f'ALTER TABLE users ADD COLUMN {col} {coltype}')
+ 1153          print('Added:', col)
+ 1154  conn.commit(); conn.close(); print('Done')
+ 1155  "
+ 1156  pkill -f "uvicorn app.main" && sleep 1 && sqlite3 sql_app.db "
+ 1157  ALTER TABLE users ADD COLUMN totp_secret VARCHAR;
+ 1158  ALTER TABLE users ADD COLUMN is_2fa_enabled BOOLEAN DEFAULT 0;
+ 1159  ALTER TABLE users ADD COLUMN failed_login_attempts INTEGER DEFAULT 0;
+ 1160  ALTER TABLE users ADD COLUMN lockout_until DATETIME;
+ 1161  ALTER TABLE users ADD COLUMN last_login DATETIME;
+ 1162  ALTER TABLE users ADD COLUMN facebook_id VARCHAR;
+ 1163  " 2>&1 && echo "Schema updated OK"
+ 1164  npm run dev
+ 1165  cd /home/rr/PROJECTS/SUKCES/WTOREK-UP-23.02
+ 1166  ss -tulpn | grep 5000
+ 1167  curl -s http://localhost:8001/api/health
+ 1168  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1169  fuser -k 8001/tcp
+ 1170  curl -s http://localhost:8001/api/health
+ 1171  curl -X OPTIONS http://localhost:8001/api/v1/auth/login      -H "Origin: http://localhost:5000"      -H "Access-Control-Request-Method: POST"      -v
+ 1172  fuser -k 8001/tcp
+ 1173  curl -X OPTIONS http://localhost:8001/api/v1/auth/login      -H "Origin: http://localhost:5000"      -H "Access-Control-Request-Method: POST"      -v
+ 1174  sleep 2 && curl -X OPTIONS http://localhost:8001/api/v1/auth/login      -H "Origin: http://localhost:5000"      -H "Access-Control-Request-Method: POST"      -v
+ 1175  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001
+ 1176  DEV_MODE=true ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+ 1177  fuser -k 8001/tcp
+ 1178  sleep 2 && curl -X OPTIONS http://localhost:8001/api/v1/auth/login      -H "Origin: http://localhost:5000"      -H "Access-Control-Request-Method: POST"      -v
+ 1179  ls -l sql_app.db
+ 1180  fuser -k 8001/tcp
+ 1181  curl -s http://localhost:8001/api/health
+ 1182  curl -s -X POST http://localhost:8001/api/v1/auth/login \
+ 1183    -H "Content-Type: application/json" \
+ 1184    -H "Origin: http://localhost:5000" \
+ 1185    -d '{"email":"admin@example.com","password":"StrongPass123!"}' \
+ 1186    -v 2>&1 | head -40
+ 1187  pkill -f "uvicorn app.main" && sleep 2 && echo killed
+ 1188  curl -s -X POST http://localhost:8001/api/v1/auth/login \
+ 1189    -H "Content-Type: application/json" \
+ 1190    -d '{"email":"admin@example.com","password":"StrongPass123!"}' \
+ 1191    --max-time 10 | python3 -m json.tool 2>&1 | head -20
+ 1192  PGPASSWORD=dev_password psql -h localhost -p 55432 -U postgres -d legal_services_dev -c "\d users" 2>&1 | head -30
+ 1193  docker exec legal_services_db_dev psql -U postgres -d legal_services_dev -c "\d users" 2>&1 | head -35
+ 1194  docker exec legal_services_db_dev sh -c 'psql -U postgres -d legal_services_dev -c "SELECT column_name FROM information_schema.columns WHERE table_name='"'"'users'"'"' ORDER BY ordinal_position" 2>&1'
+ 1195  docker exec legal_services_db_dev psql -U postgres -d legal_services_dev -c "
+ 1196  ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_secret VARCHAR;
+ 1197  ALTER TABLE users ADD COLUMN IF NOT EXISTS is_2fa_enabled BOOLEAN DEFAULT FALSE;
+ 1198  ALTER TABLE users ADD COLUMN IF NOT EXISTS failed_login_attempts INTEGER DEFAULT 0;
+ 1199  ALTER TABLE users ADD COLUMN IF NOT EXISTS lockout_until TIMESTAMP;
+ 1200  " 2>&1
+ 1201  ./venv/bin/python3 -c "import redis.asyncio; help(redis.asyncio.Redis.from_url)" 2>&1 | grep -i timeout | head -10
+ 1202  find . -maxdepth 3 -not -path '*/.*'
+ 1203  find backend/app -maxdepth 2 -not -path '*/.*' && find frontend -maxdepth 2 -not -path '*/.*'
+ 1204  find frontend/src -maxdepth 3 -not -path '*/.*' || find frontend/components -maxdepth 3 -not -path '*/.*'
+ 1205  ls -R backend/app
+ 1206  ls backend/app/models
+ 1207  ls backend/app/api/v1/endpoints
+ 1208  find backend/app -name "case.py"
+ 1209  find backend/app -type d -name "models"
+ 1210  grep -r "class Case" backend/app
+ 1211  ls -R backend/app/db
+ 1212  find frontend/src -name "*Dashboard.tsx"
+ 1213  find . -name "AdminDashboard.tsx" && find . -name "LawyerDashboard.tsx"
+ 1214  grep -r "cerebras" backend/app
+ 1215  ls frontend/src/components/ui/use-toast*
+ 1216  find . -name "use-toast*"
+ 1217  grep -n "const renderCases = () => (" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx
+ 1218  grep -n "const openCase" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx
+ 1219  grep -n "interface Case" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx
+ 1220  grep -n "const \[caseTab" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx
+ 1221  docker --version && docker-compose --version
+ 1222  docker-compose up -d --build
+ 1223  docker-compose logs legal_backend | tail -n 50
+ 1224  docker-compose logs backend | tail -n 50
+ 1225  grep -n "sidebar" /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend/pages/LawyerDashboard.tsx | head -n 20
+ 1226  docker logs legal_services_db_dev
+ 1227  docker compose -f docker-compose.dev.yml down && docker compose -f docker-compose.dev.yml up -d --build
+ 1228  docker exec legal_services_backend_dev alembic upgrade head
+ 1229  docker exec legal_services_backend_dev python -c "from app.db.database import SessionLocal; from app.models.user import User; from app.models.case import Case; from app.models.payment import Payment; from app.models.notification import Notification; s=SessionLocal(); print([u.email for u in s.query(User).all()])"
+ 1230  docker exec legal_services_backend_dev python -c "
+ 1231  from app.db.database import SessionLocal
+ 1232  from app.models.user import User, UserRole
+ 1233  from app.services.auth_service import AuthService
+ 1234  from datetime import datetime
+ 1235  import asyncio
+ 1236  async def seed():
+ 1237      db = SessionLocal()
+ 1238      admin_email = 'admin@example.com'
+ 1239      admin_password = 'StrongPass123!'
+ 1240      operator_email = 'operator@example.com'
+ 1241      operator_password = 'StrongPass123!'
+ 1242      
+ 1243      # Use exact type from SQLAlchemy model
+ 1244      admin = db.query(User).filter(User.email == admin_email).first()
+ 1245      if not admin:
+ 1246          admin = User(email=admin_email, first_name='Admin')
+ 1247          db.add(admin)
+ 1248      admin.role = UserRole.ADMIN
+ 1249      admin.is_active = True
+ 1250      admin.is_verified = True
+ 1251      admin.hashed_password = AuthService.get_password_hash(admin_password)
+ 1252      
+ 1253      oper = db.query(User).filter(User.email == operator_email).first()
+ 1254      if not oper:
+ 1255          oper = User(email=operator_email, first_name='Operator')
+ 1256          db.add(oper)
+ 1257      oper.role = UserRole.OPERATOR
+ 1258      oper.is_active = True
+ 1259      oper.is_verified = True
+ 1260      oper.hashed_password = AuthService.get_password_hash(operator_password)
+ 1261      
+ 1262      db.commit()
+ 1263      print('SUCCESS')
+ 1264  asyncio.run(seed())
+ 1265  "
+ 1266  bun run lint
+ 1267  cd frontend/
+ 1268  bun run lint
+ 1269  sudo bun run lint
+ 1270  sudo bun run lint:fix
+ 1271  sudo apt install build-essential pkg-config
+ 1272  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+ 1273  rustc --version
+ 1274  cargo --version
+ 1275  curl -LsSf https://raw.githubusercontent.com/openagen/zeroclaw/main/scripts/install.sh | bash
+ 1276  export PATH="$HOME/.cargo/bin:$PATH"
+ 1277  zeroclaw onboard --interactive
+ 1278  xport GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1279  export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1280  zeroclaw channel start
+ 1281  cargo build --features whatsapp-web
+ 1282  zeroclaw onboard --force
+ 1283  cd ~/.zeroclaw/config.toml
+ 1284  cd ~/.zeroclaw
+ 1285  ls
+ 1286  nano config.toml 
+ 1287  sudo export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1288  export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1289  nano config.toml 
+ 1290  zeroclaw onboard --channels-only
+ 1291  nano config.toml 
+ 1292  vim conifg.toml
+ 1293  zeroclaw onboard --channels-only
+ 1294  zeroclaw agent -m "Hello, ZeroClaw!"
+ 1295  zeroclaw onboard --interactive
+ 1296  zeroclaw channel start
+ 1297  zeroclaw onboard
+ 1298  zeroclaw status
+ 1299  export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1300  source ~/.bashrc
+ 1301  zeroclaw onboard --interactive
+ 1302  cd ~/.zeroclaw
+ 1303  zeroclaw status
+ 1304  export GEMINI_API_KEY="AIzaSyASs4gNXyu1kkOogqyIFT57R0LKOZsxYOw"
+ 1305  nano ~/.bashrc
+ 1306  zeroclaw agent -m "Hello, ZeroClaw!"
+ 1307  zeroclaw daemon
+ 1308  zeroclaw doctor
+ 1309  sudo mkdir -p /etc/apt/keyrings
+ 1310  curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg |   sudo gpg --dearmor --yes -o /etc/apt/keyrings/antigravity-repo-key.gpg
+ 1311  echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" |   sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
+ 1312  sudo apt update
+ 1313  sudo apt install antigravity
+ 1314  cd frontend/
+ 1315  bun run coverage
+ 1316  history > historia.txt
+ 1317  ls
+ 1318  history
+ 1319  bun run coverage > coverage_full.txt 2>&1
+ 1320  source /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.venv/bin/activate
+ 1321  cd frontend/
+ 1322  bun run coverage | tee coverage.log
+ 1323  ls
+ 1324  source /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.venv/bin/activate
+ 1325  cd frontend && bun install
+ 1326  bun run test:ai-benchmark
+ 1327  bun run format
+ 1328  bun install
+ 1329  bun add -d prettier
+ 1330  bunx prettier --write "src/**/*.{js,jsx,ts,tsx}"
+ 1331  bun run format
+ 1332  bun run format:check
+ 1333  bun run typecheck
+ 1334  bun test frontend/components/__tests__/DocumentAICenter.test.tsx
+ 1335  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1336  cd frontend && npx vitest run components/__tests__/DocumentAICenter.test.tsx
+ 1337  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1338  npx vitest run -c frontend/vitest.config.ts frontend/components/__tests__/DocumentAICenter.test.tsx
+ 1339  ps aux | grep vitest
+ 1340  docker logs legal_backend --tail 100
+ 1341  docker logs legal_backend --tail 500 | grep -A 20 "Próba transformacji przez: Mistral"
+ 1342  ps aux | grep vitest
+ 1343  docker logs legal_backend --tail 50
+ 1344  ps aux | grep node | grep -v grep
+ 1345  npx vitest run tests/ai_benchmark/legal_consistency.test.ts -c vitest.ai-benchmark.config.ts --root frontend
+ 1346  docker logs legal_backend --tail 100 | grep "Evaluation error" -B 5 -A 5
+ 1347  docker logs legal_backend | grep '"score": 0' -B 20 -A 5
+ 1348  docker exec legal_backend cat /app/app/services/ai_orchestrator.py | grep -A 5 "Resilient URL construction"
+ 1349  docker exec legal_backend ls -R /app | grep ai_orchestrator.py
+ 1350  docker exec legal_backend find /app -name ai_orchestrator.py
+ 1351  docker exec legal_backend sed -n '20,50p' /app/app/services/ai_orchestrator.py
+ 1352  docker exec legal_backend sed -n '27,35p' /app/app/services/ai_orchestrator.py
+ 1353  docker restart legal_backend && \
+ 1354  npx vitest run tests/ai_benchmark/legal_consistency.test.ts -c vitest.ai-benchmark.config.ts --root frontend && \
+ 1355  npx vitest run tests/ai_benchmark/orchestrator_tiers.test.ts -c vitest.ai-benchmark.config.ts --root frontend && \
+ 1356  npx vitest run components/__tests__/DocumentAICenter.test.tsx --root frontend
+ 1357  ls frontend/node_modules/jsdom
+ 1358  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1359  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1360  python3 start.py
+ 1361  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1362  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1363  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend
+ 1364  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1365  docker ps
+ 1366  docker network ls
+ 1367  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/e2e-multi-role-tests
+ 1368  docker build -t lexportal-e2e . && docker run --network host lexportal-e2e
+ 1369  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1370  docker exec legal_backend python check_users.py
+ 1371  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1372  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1373  docker-compose up e2e-tests --build
+ 1374  docker exec legal_backend python -c "import asyncio; from app.db.session import AsyncSessionLocal; from app.db.models import User; from sqlalchemy.future import select; async def check(): async with AsyncSessionLocal() as s: r = await s.execute(select(User.email, User.is_2fa_enabled)); [print(f'{row[0]}: 2FA={row[1]}') for row in r.all()]; asyncio.run(check())"
+ 1375  docker exec legal_backend python -c "import asyncio; from app.db.session import AsyncSessionLocal; from app.db.models import User; from sqlalchemy import update; async def fix(): async with AsyncSessionLocal() as s: await s.execute(update(User).values(is_2fa_enabled=False)); await s.commit(); print('2FA Disabled for all users'); import asyncio; asyncio.run(fix())"
+ 1376  docker exec legal_backend python disable_2fa.py
+ 1377  docker exec legal_backend python -c "import asyncio; from app.db.session import AsyncSessionLocal; from app.db.models import User; from sqlalchemy import select; async def check(): async with AsyncSessionLocal() as s: r = await s.execute(select(User.email, User.is_2fa_enabled)); [print(f'{row[0]} 2FA={row[1]}') for row in r.all()]; asyncio.run(check())"
+ 1378  docker exec legal_backend python check_2fa.py
+ 1379  docker-compose up e2e-tests --build
+ 1380  docker logs legal_backend --tail 50
+ 1381  docker-compose up --build e2e-tests
+ 1382  docker-compose up --build e2e-tests
+ 1383  npx vitest run components/__tests__/DocumentAICenter.test.tsx --root frontend
+ 1384  cd ..
+ 1385  docker-compose up -d --build
+ 1386  mkdir -p e2e-multi-role-tests/tests e2e-multi-role-tests/docs e2e-multi-role-tests/page-objects e2e-multi-role-tests/.github/workflows
+ 1387  cd e2e-multi-role-tests
+ 1388  npm install
+ 1389  npx playwright test --ui
+ 1390  docker build -t lexportal-e2e .
+ 1391  docker run lexportal-e2e
+ 1392  docker exec legal_backend python check_users.py
+ 1393  docker-compose up e2e-tests
+ 1394  docker logs legal_frontend --tail 50
+ 1395  docker logs legal_backend --tail 50
+ 1396  docker-compose up e2e-tests
+ 1397  cd backend && python3 check_users.py
+ 1398  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1399  docker-compose up e2e-tests --build
+ 1400  docker logs legal_backend --tail 100
+ 1401  docker exec legal_backend python -c "from app.core.config import settings; print(settings.DATABASE_URL)"
+ 1402  docker exec legal_backend python force_disable_2fa.py
+ 1403  docker-compose up -d backend && docker logs -f legal_backend
+ 1404  docker logs legal_backend --tail 50
+ 1405  docker-compose up e2e-tests
+ 1406  docker logs legal_backend --tail 50
+ 1407  docker logs legal_frontend --tail 20
+ 1408  docker-compose down && docker-compose up --build -d redis db backend frontend && docker-compose up --build e2e-tests
+ 1409  docker exec legal_backend python /app/check_users_db.py
+ 1410  docker exec legal_backend ls -l /app/check_users_db.py
+ 1411  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1412  docker exec legal_backend python /app/check_users_db.py
+ 1413  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1414  docker logs legal_backend | grep "/by-role"
+ 1415  docker logs legal_backend --tail 100
+ 1416  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1417  docker exec legal_backend python3 /app/check_users_db.py
+ 1418  docker exec legal_backend python3 /app/check_users_db.py
+ 1419  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1420  docker-compose down && docker-compose up --build -d redis db backend frontend && docker-compose up --build e2e-tests
+ 1421  docker logs legal_e2e_tests | grep -A 20 "Communication: Operator <-> Client"
+ 1422  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1423  docker exec legal_backend python3 /app/check_users_db.py
+ 1424  docker exec legal_backend python3 /app/fix_roles.py
+ 1425  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1426  docker logs legal_e2e_tests | grep -A 20 "Communication: Admin <-> Client"
+ 1427  docker logs legal_e2e_tests | grep -B 10 -A 50 "Communication: Admin <-> Client"
+ 1428  docker logs legal_e2e_tests > /tmp/e2e-logs.txt 2>&1 && tail -n 200 /tmp/e2e-logs.txt
+ 1429  cat /tmp/e2e-logs.txt | grep -C 5 "Error:"
+ 1430  docker-compose stop e2e-tests && docker-compose up --build e2e-tests
+ 1431  docker logs legal_e2e_tests --tail 100
+ 1432  cat /tmp/e2e-logs.txt | grep -C 5 "Error:"
+ 1433  docker logs legal_e2e_tests > /tmp/e2e-logs-new.txt 2>&1 && cat /tmp/e2e-logs-new.txt | grep -C 10 "Error:"
+ 1434  docker-compose stop e2e-tests && docker-compose up --build e2e-tests
+ 1435  docker logs legal_e2e_tests > /tmp/e2e-logs-last.txt 2>&1 && cat /tmp/e2e-logs-last.txt | grep -C 15 "Communication: Operator <-> Client" | grep "Error:" -A 10
+ 1436  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1437  docker exec legal_backend python3 /app/check_users_db.py
+ 1438  docker exec legal_backend python3 /app/fix_roles.py && docker exec legal_backend python3 /app/check_users_db.py
+ 1439  docker exec legal_db psql -U lexportal -d lexportal -c "UPDATE users SET role = 'operator' WHERE email = 'anna.nowak@lexportal.pl'; SELECT email, role FROM users WHERE email = 'anna.nowak@lexportal.pl';"
+ 1440  docker exec legal_db bash -c "PGPASSWORD=lexportal123 psql -U lexuser -d lexdb -c \"UPDATE users SET role = 'operator' WHERE email = 'anna.nowak@lexportal.pl'; SELECT email, role FROM users WHERE email = 'anna.nowak@lexportal.pl';\""
+ 1441  docker exec legal_db bash -c "psql -U postgres -l 2>&1 | head -20"
+ 1442  docker exec legal_db bash -c "psql -U postgres -d lexportal -c \"UPDATE users SET role = 'operator' WHERE email = 'anna.nowak@lexportal.pl'; SELECT email, role FROM users WHERE email = 'anna.nowak@lexportal.pl';\""
+ 1443  docker exec legal_db bash -c "psql -U postgres -d lexportal -c \"\\dt\""
+ 1444  docker exec legal_db bash -c "psql -U postgres -d lexportal -c \"UPDATE \\\"user\\\" SET role = 'operator' WHERE email = 'anna.nowak@lexportal.pl'; SELECT email, role FROM \\\"user\\\" WHERE email = 'anna.nowak@lexportal.pl';\""
+ 1445  curl -s "http://localhost/api/v1/auth/login" -X POST -H "Content-Type: application/json" -d '{"email":"jan.kowalski@example.com","password":"password123"}' | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('access_token','NO_TOKEN')[:50])"
+ 1446  curl -s "http://localhost/api/v1/auth/login" -X POST -H "Content-Type: application/json" -d '{"email":"jan.kowalski@example.com","password":"password123"}'
+ 1447  docker exec legal_db bash -c "psql -U postgres -d lexportal -c \"SELECT email, role FROM \\\"user\\\" WHERE email = 'anna.nowak@lexportal.pl';\""
+ 1448  TOKEN=$(curl -s "http://localhost/api/v1/auth/login" -X POST -d "username=jan.kowalski@example.com&password=password123" | python3 -c "import sys,json; print(json.load(sys.stdin).get('access_token',''))") && curl -s "http://localhost/api/v1/users/by-role?role=operator" -H "Authorization: Bearer $TOKEN" | python3 -m json.tool
+ 1449  docker-compose stop e2e-tests && docker-compose up --build e2e-tests 2>&1 | tail -50
+ 1450  docker logs legal_e2e_tests 2>&1 | grep -A 20 "Error:"
+ 1451  docker-compose stop e2e-tests && docker-compose up --build e2e-tests 2>&1 | tail -30
+ 1452  docker-compose stop e2e-tests backend && docker-compose up --build -d backend && sleep 5 && docker-compose up --build e2e-tests 2>&1 | tail -30
+ 1453  docker exec legal_db bash -c "psql -U postgres -d lexportal -c \"SELECT email, role FROM \\\"user\\\" WHERE email = 'anna.nowak@lexportal.pl';\""
+ 1454  docker logs legal_e2e_tests 2>&1 | grep -A 20 "Operator <-> Client"
+ 1455  docker-compose stop e2e-tests && docker-compose up --build e2e-tests 2>&1 | tail -20
+ 1456  docker logs legal_e2e_tests 2>&1 | grep -A 20 "Admin <-> Client" | grep "Error:" -A 15
+ 1457  docker-compose stop e2e-tests && docker-compose up --build e2e-tests
+ 1458  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1459  docker ps
+ 1460  docker exec legal_backend alembic history
+ 1461  docker exec legal_backend alembic revision --autogenerate -m "Add 2FA support and totp_secret"
+ 1462  docker exec legal_backend alembic upgrade head
+ 1463  docker exec legal_db psql -U postgres -d lexportal -c "\d user"
+ 1464  grep -r "totp_secret" backend/alembic/versions
+ 1465  grep -r "totp_secret" alembic/versions
+ 1466  docker exec legal_backend alembic revision -m "Add 2FA support to user"
+ 1467  docker exec legal_backend alembic upgrade head
+ 1468  grep -r "client_name" alembic/versions
+ 1469  docker exec legal_db psql -U postgres -d lexportal -c "select * from alembic_version"
+ 1470  docker exec legal_db psql -U postgres -d lexportal -c "\d case"
+ 1471  docker exec legal_db psql -U postgres -d lexportal -c "\dt ai_usage_log"
+ 1472  docker exec legal_backend alembic stamp a94cbd1c7ad9
+ 1473  docker exec legal_backend alembic upgrade head
+ 1474  docker exec legal_db psql -U postgres -d lexportal -c "\d user"
+ 1475  docker exec legal_db psql -U postgres -d lexportal -c "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'user';"
+ 1476  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend && poetry run alembic check
+ 1477  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1478  docker compose -f docker-compose.prod.yml config
+ 1479  cd /home/rr
+ 1480  ssh-keygen -t ed25519 -C "nordp360" -f ~/.ssh/github_nordp360 -N ""
+ 1481  curl -I http://143.244.205.70
+ 1482  curl -H "Host: 143.244.205.70" http://143.244.205.70
+ 1483  curl -L -I http://143.244.205.70
+ 1484  ls -la /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions
+ 1485  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1486  git status
+ 1487  git diff
+ 1488  cd /home/rr
+ 1489  curl -X POST http://143.244.205.70/api/v1/auth/login \
+ 1490       -H "Content-Type: application/x-www-form-urlencoded" \
+ 1491       -d "username=admin%40lexportal.pl&password=admin123" \
+ 1492       -I
+ 1493  curl -X POST http://143.244.205.70/api/v1/auth/login \
+ 1494       -H "Content-Type: application/x-www-form-urlencoded" \
+ 1495       -d "username=admin%40lexportal.pl&password=admin123"
+ 1496  docker logs --tail 50 lexportal_backend_prod
+ 1497  docker ps
+ 1498  docker logs lexportal_frontend_prod
+ 1499  docker logs lexportal_backend_prod
+ 1500  docker ps -a
+ 1501  docker inspect a2f199aa2dd2
+ 1502  docker logs --tail 20 0ef0afc6ff90
+ 1503  docker logs lexportal_frontend_prod | tail -n 20
+ 1504  docker logs a2f199aa2dd2 | tail -n 20
+ 1505  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1506  docker compose -f docker-compose.prod.yml down -v --remove-orphans
+ 1507  git add backend/start.py && git commit -m "Fix alembic table creation" && git push
+ 1508  git log -p docker-compose.prod.yml | head -n 50
+ 1509  docker compose -f docker-compose.prod.yml build backend
+ 1510  docker compose -f docker-compose.prod.yml up -d --force-recreate
+ 1511  docker logs lexportal_backend_prod
+ 1512  docker logs lexportal_backend_prod | head -n 50
+ 1513  docker logs lexportal_backend_prod 2>&1 | head -n 50
+ 1514  cd /home/rr
+ 1515  docker logs lexportal_backend_prod > /tmp/logs.txt 2>&1
+ 1516  docker logs --tail 20 lexportal_backend_prod
+ 1517  docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d --build backend
+ 1518  source /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/.venv/bin/activate
+ 1519  docker restart lexportal_backend_prod
+ 1520  docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d --build backend
+ 1521  docker compose -f docker-compose.prod.yml down -v --remove-orphans
+ 1522  git log -p docker-compose.prod.yml | head -n 50
+ 1523  docker ps -a
+ 1524  curl -X POST http://143.244.205.70/api/v1/auth/login \
+ 1525  docker ps
+ 1526  docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d --build backend
+ 1527  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1528  docker logs --tail 100 lexportal_backend_prod
+ 1529  docker restart lexportal_backend_prod
+ 1530  docker logs --tail 50 lexportal_backend_prod
+ 1531  docker restart lexportal_backend_prod && sleep 10 && docker logs --tail 100 lexportal_backend_prod
+ 1532  ls -l /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && cat /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py
+ 1533  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions
+ 1534  sudo rm /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py
+ 1535  ls -ld /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/
+ 1536  mv /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py.bak && ls -l a94cbd1c7ad9_add_ai_usage_log.py
+ 1537  cat /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py
+ 1538  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1539  docker restart lexportal_backend_prod && sleep 10 && docker logs --tail 100 lexportal_backend_prod
+ 1540  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions
+ 1541  ls -l /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && cat /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py | grep -C 5 "def upgrade"
+ 1542  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1543  docker exec lexportal_backend_prod cat /app/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py | grep -C 5 "def upgrade"
+ 1544  docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod build backend && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d backend && sleep 10 && docker logs --tail 50 lexportal_backend_prod
+ 1545  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1546  docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod build backend && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d backend && sleep 10 && docker logs --tail 100 lexportal_backend_prod
+ 1547  docker logs lexportal_db_prod
+ 1548  docker exec lexportal_db_prod psql -U lexportal -d lexportal -c "\dt"
+ 1549  docker exec lexportal_db_prod psql -U postgres -d postgres -c "SELECT datname FROM pg_database;"
+ 1550  grep "POSTGRES_" deploy/.env.prod
+ 1551  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "\dt"
+ 1552  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT * FROM alembic_version;"
+ 1553  grep -C 20 "op.create_table" backend/alembic/versions/9387ce31a627_initial_schema.py
+ 1554  grep -l "op.create_table" backend/alembic/versions/*.py
+ 1555  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1556  python3 -m app.db.models
+ 1557  export PYTHONPATH=$PYTHONPATH:. && alembic revision --autogenerate -m "Regenerate initial schema"
+ 1558  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1559  docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod exec backend alembic revision --autogenerate -m "Fix full schema"
+ 1560  mv backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py.broken && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d backend && sleep 10 && docker logs lexportal_backend_prod
+ 1561  grep "revision =" backend/alembic/versions/*.py
+ 1562  ls -l backend/alembic/versions/
+ 1563  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public;"
+ 1564  cp backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py.broken backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1565  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic
+ 1566  alembic revision -m "Add versioning" && mv `ls -t versions/*.py | head -1` versions/000_base.py
+ 1567  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1568  alembic -c alembic.ini revision -m "Add versioning" && mv `ls -t alembic/versions/*.py | head -1` alembic/versions/000_base.py
+ 1569  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1570  rm backend/alembic/versions/2f1b58d1647e_add_versioning.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1571  docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1572  docker exec lexportal_backend_prod alembic current
+ 1573  grep "down_revision =" backend/alembic/versions/*.py
+ 1574  grep "down_revision =" backend/alembic/versions/*.py
+ 1575  cat backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py | grep "down_revision ="
+ 1576  cat backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py
+ 1577  grep -E "revision: str =" backend/alembic/versions/*.py
+ 1578  grep -E "down_revision: Union\[str, None\] =" backend/alembic/versions/*.py
+ 1579  grep "down_revision =" backend/alembic/versions/000_base.py && grep "revision =" backend/alembic/versions/000_base.py
+ 1580  cat backend/alembic/versions/000_base.py
+ 1581  grep "Revision ID: " backend/alembic/versions/*.py
+ 1582  grep "Revises: " backend/alembic/versions/*.py
+ 1583  head -n 20 backend/alembic/versions/490118ede771_add_2fa_support_to_user.py
+ 1584  head -n 20 backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py
+ 1585  head -n 20 backend/alembic/versions/88feee5b3d0b_expand_legaltemplate_and_document_models.py
+ 1586  head -n 20 backend/alembic/versions/9387ce31a627_initial_schema.py
+ 1587  cat backend/alembic/versions/000_base.py
+ 1588  sed -i "s/Revises: 490118ede771/Revises: /" backend/alembic/versions/000_base.py && sed -i "s/down_revision: Union\[str, None\] = '490118ede771'/down_revision: Union[str, None] = None/" backend/alembic/versions/000_base.py && sed -i "s/Revises: 000_base/Revises: 2f1b58d1647e/" backend/alembic/versions/9387ce31a627_initial_schema.py && sed -i "s/down_revision: Union\[str, None\] = '000_base'/down_revision: Union[str, None] = '2f1b58d1647e'/" backend/alembic/versions/9387ce31a627_initial_schema.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1589  grep "revision =" backend/alembic/versions/*.py | sort
+ 1590  grep "revision =" backend/alembic/versions/*.py
+ 1591  cat backend/alembic/versions/000_base.py | head -n 25
+ 1592  grep "revision" backend/alembic/versions/*.py
+ 1593  grep -r "down_revision" backend/alembic/versions/
+ 1594  sed -i "s/down_revision: Union\[str, None\] = 'a94cbd1c7ad9'/down_revision: Union[str, None] = '2f1b58d1647e'/" backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && sed -i "s/Revises: a94cbd1c7ad9/Revises: 2f1b58d1647e/" backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && head -n 20 backend/alembic/versions/490118ede771_add_2fa_support_to_user.py
+ 1595  docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1596  head -n 25 backend/alembic/versions/9387ce31a627_initial_schema.py && head -n 25 backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && head -n 25 backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py && head -n 25 backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && head -n 25 backend/alembic/versions/88feee5b3d0b_expand_legaltemplate_and_document_models.py && head -n 20 backend/alembic/versions/000_base.py
+ 1597  sed -i "s/down_revision: Union\[str, None\] = '2f1b58d1647e'/down_revision: Union[str, None] = '490118ede771'/" backend/alembic/versions/9387ce31a627_initial_schema.py && sed -i "s/Revises: 2f1b58d1647e/Revises: 490118ede771/" backend/alembic/versions/9387ce31a627_initial_schema.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1598  docker restart lexportal_backend_prod && sleep 10 && docker logs lexportal_backend_prod | head -n 100
+ 1599  grep -E "revision: str =|down_revision: Union\[str, None\] =" backend/alembic/versions/*.py
+ 1600  sed -i "s/down_revision: Union\[str, None\] = 'ab60c4070c3a'/down_revision: Union[str, None] = '88feee5b3d0b'/" backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && sed -i "s/Revises: ab60c4070c3a/Revises: 88feee5b3d0b/" backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && sed -i "s/down_revision: Union\[str, None\] = '88feee5b3d0b'/down_revision: Union[str, None] = 'a94cbd1c7ad9'/" backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py && sed -i "s/Revises: 88feee5b3d0b/Revises: a94cbd1c7ad9/" backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1601  grep -E "revision: str =" backend/alembic/versions/*.py
+ 1602  grep -E "down_revision" backend/alembic/versions/*.py
+ 1603  sed -i "s/down_revision: Union\[str, None\] = 'ab60c4070c3a'/down_revision: Union[str, None] = '88feee5b3d0b'/" backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && sed -i "s/Revises: ab60c4070c3a/Revises: 88feee5b3d0b/" backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && sed -i "s/down_revision: Union\[str, None\] = '88feee5b3d0b'/down_revision: Union[str, None] = 'a94cbd1c7ad9'/" backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py && sed -i "s/Revises: 88feee5b3d0b/Revises: a94cbd1c7ad9/" backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1604  ls -a backend/alembic/versions/
+ 1605  cat backend/alembic/versions/000_base.py && cat backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && cat backend/alembic/versions/9387ce31a627_initial_schema.py && cat backend/alembic/versions/88feee5b3d0b_expand_legaltemplate_and_document_models.py && cat backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && cat backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py
+ 1606  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT * FROM alembic_version;"
+ 1607  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "\dt"
+ 1608  sed -i "s/down_revision: Union\[str, None\] = '2f1b58d1647e'/down_revision: Union[str, None] = None/" backend/alembic/versions/000_base.py && sed -i "s/Revises: 490118ede771/Revises: /" backend/alembic/versions/000_base.py && sed -i "s/down_revision: Union\[str, None\] = None/down_revision: Union[str, None] = '2f1b58d1647e'/" backend/alembic/versions/000_base.py && sed -i "s/down_revision: Union\[str, None\] = '2f1b58d1647e'/down_revision: Union[str, None] = None/" backend/alembic/versions/000_base.py && cat backend/alembic/versions/000_base.py
+ 1609  sed -i "s/down_revision: Union\[str, None\] = '2f1b58d1647e'/down_revision: Union[str, None] = '2f1b58d1647e'/" backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && sed -i "s/down_revision: Union\[str, None\] = '490118ede771'/down_revision: Union[str, None] = '490118ede771'/" backend/alembic/versions/9387ce31a627_initial_schema.py && sed -i "s/down_revision: Union\[str, None\] = '9387ce31a627'/down_revision: Union[str, None] = '9387ce31a627'/" backend/alembic/versions/88feee5b3d0b_expand_legaltemplate_and_document_models.py && sed -i "s/down_revision: Union\[str, None\] = '88feee5b3d0b'/down_revision: Union[str, None] = '88feee5b3d0b'/" backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && sed -i "s/down_revision: Union\[str, None\] = 'a94cbd1c7ad9'/down_revision: Union[str, None] = 'a94cbd1c7ad9'/" backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod scale backend=0 && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d backend && sleep 10 && docker logs lexportal_backend_prod
+ 1610  grep -E "revision|down_revision" backend/alembic/versions/*.py
+ 1611  sed -i "s/down_revision: Union\[str, None\] = 'a94cbd1c7ad9'/down_revision: Union[str, None] = 'ab60c4070c3a'/" backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && sed -i "s/Revises: a94cbd1c7ad9/Revises: ab60c4070c3a/" backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && sed -i "s/down_revision: Union\[str, None\] = '490118ede771'/down_revision: Union[str, None] = '2f1b58d1647e'/" backend/alembic/versions/9387ce31a627_initial_schema.py && sed -i "s/Revises: 490118ede771/Revises: 2f1b58d1647e/" backend/alembic/versions/9387ce31a627_initial_schema.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1612  sed -i "s/down_revision: Union\[str, None\] = '2f1b58d1647e'/down_revision: Union[str, None] = '2f1b58d1647e'/" backend/alembic/versions/9387ce31a627_initial_schema.py && sed -i "s/Revises: 490118ede771/Revises: 2f1b58d1647e/" backend/alembic/versions/9387ce31a627_initial_schema.py && sed -i "s/down_revision: Union\[str, None\] = '9387ce31a627'/down_revision: Union[str, None] = '9387ce31a627'/" backend/alembic/versions/88feee5b3d0b_expand_legaltemplate_and_document_models.py && sed -i "s/down_revision: Union\[str, None\] = '88feee5b3d0b'/down_revision: Union[str, None] = '88feee5b3d0b'/" backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && sed -i "s/down_revision: Union\[str, None\] = 'a94cbd1c7ad9'/down_revision: Union[str, None] = 'a94cbd1c7ad9'/" backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py && sed -i "s/down_revision: Union\[str, None\] = 'ab60c4070c3a'/down_revision: Union[str, None] = 'ab60c4070c3a'/" backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1613  docker exec lexportal_backend_prod alembic current || docker exec lexportal_backend_prod python3 -m alembic current
+ 1614  cat /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend/alembic/versions/9387ce31a627_initial_schema.py
+ 1615  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/backend
+ 1616  cat /app/start.py
+ 1617  cd /home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES
+ 1618  cat backend/start.py
+ 1619  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public; GRANT ALL ON SCHEMA public TO lexportal_user; GRANT ALL ON SCHEMA public TO public;" && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1620  docker exec lexportal_backend_prod alembic history || docker exec lexportal_backend_prod python3 -m alembic history
+ 1621  sed -i "s/command.upgrade(alembic_cfg, \"head\")/print('DEBUG: alembic history start')\n        command.history(alembic_cfg)\n        print('DEBUG: alembic history end')\n        command.upgrade(alembic_cfg, \"head\")/" backend/start.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1622  docker logs lexportal_backend_prod | grep DEBUG -A 100 -B 10
+ 1623  sed -i "s/command.upgrade(alembic_cfg, \"head\")/print('DEBUG: alembic branches start')\n        command.branches(alembic_cfg)\n        print('DEBUG: alembic branches end')\n        command.upgrade(alembic_cfg, \"head\")/" backend/start.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1624  grep -B 5 -A 5 "DEBUG:" backend/start.py && cat backend/alembic/env.py
+ 1625  sed -i "s/from alembic import command/from alembic import command, util/" backend/start.py && sed -i "s/command.upgrade(alembic_cfg, \"head\")/import io\n        buf = io.StringIO()\n        alembic_cfg.stdout = buf\n        print('DEBUG: alembic history start')\n        command.history(alembic_cfg)\n        print(buf.getvalue())\n        print('DEBUG: alembic history end')\n        buf = io.StringIO()\n        alembic_cfg.stdout = buf\n        print('DEBUG: alembic branches start')\n        command.branches(alembic_cfg)\n        print(buf.getvalue())\n        print('DEBUG: alembic branches end')\n        command.upgrade(alembic_cfg, \"head\")/" backend/start.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1626  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT * FROM alembic_version;"
+ 1627  sed -i "s/command.upgrade(alembic_cfg, \"head\")/import io\n        buf = io.StringIO()\n        alembic_cfg.stdout = buf\n        print('DEBUG: alembic current start')\n        command.current(alembic_cfg)\n        print(buf.getvalue())\n        print('DEBUG: alembic current end')\n        buf = io.StringIO()\n        alembic_cfg.stdout = buf\n        print('DEBUG: alembic history start')\n        command.history(alembic_cfg)\n        print(buf.getvalue())\n        print('DEBUG: alembic history end')\n        buf = io.StringIO()\n        alembic_cfg.stdout = buf\n        print('DEBUG: alembic branches start')\n        command.branches(alembic_cfg)\n        print(buf.getvalue())\n        print('DEBUG: alembic branches end')\n        command.upgrade(alembic_cfg, \"head\")/" backend/start.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1628  docker logs lexportal_backend_prod | grep -A 20 "DEBUG: alembic"
+ 1629  sed -i "s/command.upgrade(alembic_cfg, \"head\")/import io\n        buf = io.StringIO()\n        alembic_cfg.stdout = buf\n        logger.info('DEBUG: alembic current start')\n        command.current(alembic_cfg)\n        logger.info(buf.getvalue())\n        logger.info('DEBUG: alembic current end')\n        buf = io.StringIO()\n        alembic_cfg.stdout = buf\n        logger.info('DEBUG: alembic history start')\n        command.history(alembic_cfg)\n        logger.info(buf.getvalue())\n        logger.info('DEBUG: alembic history end')\n        buf = io.StringIO()\n        alembic_cfg.stdout = buf\n        logger.info('DEBUG: alembic branches start')\n        command.branches(alembic_cfg)\n        logger.info(buf.getvalue())\n        logger.info('DEBUG: alembic branches end')\n        command.upgrade(alembic_cfg, \"head\")/" backend/start.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1630  sed -i "s/import io/import io, sys/" backend/start.py && sed -i "s/alembic_cfg.stdout = buf/alembic_cfg.stdout = sys.stdout/" backend/start.py && sed -i "s/logger.info(buf.getvalue())//" backend/start.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1631  sed -i "s/import io, sys/import io, sys, traceback/" backend/start.py && sed -i "s/command.upgrade(alembic_cfg, \"head\")/print('DEBUG: alembic context start')\n        try:\n            script = Config.get_template_directory(alembic_cfg)\n            logger.info(f'Template directory: {script}')\n        except Exception as e:\n            logger.error(f'Error getting context: {e}')\n        command.upgrade(alembic_cfg, \"head\")/" backend/start.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1632  docker exec lexportal_backend_prod ls -la /app/alembic/versions/
+ 1633  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = 'public';"
+ 1634  ls -la backend/alembic/versions/ && grep -r "2f1b58d1647e" backend/alembic/versions/ && grep -r "Revises:" backend/alembic/versions/ && grep -r "down_revision =" backend/alembic/versions/
+ 1635  ls -la backend/alembic/versions/ && grep -r "down_revision =" backend/alembic/versions/ --exclude-dir=__pycache__ --exclude="*.bak" --exclude="*.broken" && grep -r "revision =" backend/alembic/versions/ --exclude-dir=__pycache__ --exclude="*.bak" --exclude="*.broken"
+ 1636  grep -rE "down_revision|revision =" backend/alembic/versions/ --exclude-dir=__pycache__ --exclude="*.bak" --exclude="*.broken"
+ 1637  grep -h "revision =" backend/alembic/versions/*.py --exclude-dir=__pycache__ --exclude="*.bak" --exclude="*.broken"
+ 1638  grep "revision =" backend/alembic/versions/000_base.py && grep "revision =" backend/alembic/versions/9387ce31a627_initial_schema.py && grep "revision =" backend/alembic/versions/88feee5b3d0b_expand_legaltemplate_and_document_models.py && grep "revision =" backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && grep "revision =" backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && grep "revision =" backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py
+ 1639  head -n 20 backend/alembic/versions/000_base.py && head -n 20 backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && head -n 20 backend/alembic/versions/9387ce31a627_initial_schema.py && head -n 20 backend/alembic/versions/88feee5b3d0b_expand_legaltemplate_and_document_models.py && head -n 20 backend/alembic/versions/a94cbd1c7ad9_add_ai_usage_log.py && head -n 20 backend/alembic/versions/ab60c4070c3a_add_chatmessage_model.py
+ 1640  grep -A 10 "revision =" backend/alembic/versions/88feee5b3d0b_expand_legaltemplate_and_document_models.py
+ 1641  grep -C 5 "revision" backend/alembic/versions/88feee5b3d0b_expand_legaltemplate_and_document_models.py
+ 1642  grep -A 20 "run_migrations_online" backend/alembic/env.py
+ 1643  sed -i "s/command.history(alembic_cfg)/command.history(alembic_cfg, verbose=True)/" backend/start.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1644  grep "alembic_cfg.stdout" backend/start.py
+ 1645  cp backend/start.py.bak backend/start.py || true && cat > backend/start.py <<EOF
+ 1646  # =============================================================================
+ 1647  # LexPortal API - Skrypt Startowy Serwera (Uvicorn)
+ 1648  # =============================================================================
+ 1649  import os
+ 1650  import uvicorn
+ 1651  import logging
+ 1652  import sys
+ 1653  from alembic.config import Config
+ 1654  from alembic import command
+ 1655  logging.basicConfig(level=logging.INFO)
+ 1656  logger = logging.getLogger("start_script")
+ 1657  def run_migrations():
+ 1658      try:
+ 1659          logger.info("Sprawdzanie i uruchamianie migracji bazy danych...")
+ 1660          alembic_cfg = Config("alembic.ini")
+ 1661          alembic_cfg.stdout = sys.stdout
+ 1662          
+ 1663          logger.info("DEBUG: alembic history start")
+ 1664          command.history(alembic_cfg, verbose=True)
+ 1665          logger.info("DEBUG: alembic history end")
+ 1666          
+ 1667          logger.info("DEBUG: alembic branches start")
+ 1668          command.branches(alembic_cfg)
+ 1669          logger.info("DEBUG: alembic branches end")
+ 1670          
+ 1671          logger.info("Running upgrade head...")
+ 1672          command.upgrade(alembic_cfg, "head")
+ 1673          logger.info("Migracje zakończone sukcesem.")
+ 1674      except Exception as e:
+ 1675          logger.error(f"Błąd podczas uruchamiania migracji: {e}")
+ 1676          import traceback
+ 1677          traceback.print_exc()
+ 1678          raise e
+ 1679  if __name__ == "__main__":
+ 1680      run_migrations()
+ 1681      port_env = os.environ.get("PORT", "8000")
+ 1682      if not port_env or port_env == "\${PORT}":
+ 1683          port = 8000
+ 1684      else:
+ 1685          try:
+ 1686              port = int(port_env)
+ 1687          except ValueError:
+ 1688              port = 8000
+ 1689      uvicorn.run("app.main:app", host="0.0.0.0", port=port, log_level="info")
+ 1690  EOF
+ 1691  && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1692  docker ps | grep backend && docker logs lexportal_backend_prod | tail -n 50
+ 1693  docker exec lexportal_backend_prod cat /app/start.py
+ 1694  head -n 20 backend/alembic/versions/490118ede771_add_2fa_support_to_user.py && grep "def upgrade" -A 50 backend/alembic/versions/490118ede771_add_2fa_support_to_user.py
+ 1695  grep "def upgrade" -A 50 backend/alembic/versions/000_base.py
+ 1696  sed -i "s/down_revision: Union\[str, None\] = '2f1b58d1647e'/down_revision: Union[str, None] = '490118ede771'/" backend/alembic/versions/9387ce31a627_initial_schema.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod
+ 1697  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT * FROM alembic_version;" && docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = 'public';"
+ 1698  sed -i 's/from app.core.config import settings/from app.core.config import settings\nprint(f"DEBUG: settings.database_url = {settings.database_url}")/' backend/alembic/env.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 5 && docker logs lexportal_backend_prod
+ 1699  docker exec lexportal_backend_prod ls -la /app/alembic/versions/ && docker exec lexportal_backend_prod grep -r "down_revision =" /app/alembic/versions/ --exclude-dir=__pycache__ --exclude="*.bak" --exclude="*.broken"
+ 1700  sed -i "s/down_revision: Union\[str, None\] = '2f1b58d1647e'/down_revision: Union[str, None] = '490118ede771'/" backend/alembic/versions/9387ce31a627_initial_schema.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod build backend && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d backend && sleep 10 && docker logs lexportal_backend_prod
+ 1701  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = 'public';" && docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT * FROM alembic_version;"
+ 1702  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT column_name FROM information_schema.columns WHERE table_name = 'ai_usage_log';" && docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT column_name FROM information_schema.columns WHERE table_name = 'user' AND column_name IN ('two_factor_secret', 'is_two_factor_enabled');" && docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT column_name FROM information_schema.columns WHERE table_name = 'case' AND column_name IN ('client_name', 'case_type');"
+ 1703  grep -A 50 "def upgrade" backend/alembic/versions/490118ede771_add_2fa_support_to_user.py
+ 1704  grep -r "two_factor_secret" backend/app/db/models/ && grep -r "is_two_factor_enabled" backend/app/db/models/
+ 1705  find backend/app -name "*.py" | xargs grep -E "two_factor_secret|is_two_factor_enabled"
+ 1706  bash -c 'cp backend/start.py.bak backend/start.py || true' && sed -i 's/print(f"DEBUG: settings.database_url = {settings.database_url}")//' backend/alembic/env.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod build backend && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d backend && sleep 10 && docker logs lexportal_backend_prod | tail -n 20
+ 1707  docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 10 && docker logs lexportal_backend_prod | tail -n 20
+ 1708  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = 'public';" && docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT * FROM alembic_version;"
+ 1709  docker exec lexportal_db_prod psql -U lexportal_user -d lexportal_db_prod -c "SELECT column_name FROM information_schema.columns WHERE table_name = 'user';"
+ 1710  sed -i "s/command.upgrade(alembic_cfg, \"head\")/import io\n        buf = io.StringIO()\n        alembic_cfg.stdout = buf\n        logger.info('DEBUG: alembic current start')\n        command.current(alembic_cfg)\n        logger.info(buf.getvalue())\n        logger.info('DEBUG: alembic current end')\n        command.upgrade(alembic_cfg, \"head\")/" backend/start.py && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod restart backend && sleep 5 && docker logs lexportal_backend_prod | tail -n 20
+ 1711  cat > backend/start.py <<EOF
+ 1712  # =============================================================================
+ 1713  # LexPortal API - Skrypt Startowy Serwera (Uvicorn)
+ 1714  # =============================================================================
+ 1715  import os
+ 1716  import uvicorn
+ 1717  import logging
+ 1718  from alembic.config import Config
+ 1719  from alembic import command
+ 1720  logging.basicConfig(level=logging.INFO)
+ 1721  logger = logging.getLogger("start_script")
+ 1722  def run_migrations():
+ 1723      """Ruchamia migracje bazy danych przed startem serwera."""
+ 1724      try:
+ 1725          logger.info("Sprawdzanie i uruchamianie migracji bazy danych (Alembic)...")
+ 1726          alembic_cfg = Config("alembic.ini")
+ 1727          command.upgrade(alembic_cfg, "head")
+ 1728          logger.info("Migracje zakończone sukcesem.")
+ 1729      except Exception as e:
+ 1730          logger.error(f"Błąd podczas uruchamiania migracji: {e}")
+ 1731          raise e
+ 1732  if __name__ == "__main__":
+ 1733      run_migrations()
+ 1734      port_env = os.environ.get("PORT", "8000")
+ 1735      if not port_env or port_env == "\${PORT}":
+ 1736          port = 8000
+ 1737      else:
+ 1738          try:
+ 1739              port = int(port_env)
+ 1740          except ValueError:
+ 1741              port = 8000
+ 1742      uvicorn.run("app.main:app", host="0.0.0.0", port=port, log_level="info")
+ 1743  EOF
+ 1744  && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod build backend && docker-compose -f docker-compose.prod.yml --env-file deploy/.env.prod up -d backend && sleep 10 && docker logs lexportal_backend_prod | tail -n 20
+ 1745  history > history.txt

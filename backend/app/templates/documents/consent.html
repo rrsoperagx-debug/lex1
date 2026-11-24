@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zgoda na Przetwarzanie Danych Osobowych</title>
+</head>
+<body>
+    <h1>Zgoda na Przetwarzanie Danych Osobowych</h1>
+    <p>
+        Ja, niżej podpisany/a, {{ person.name }}, legitymujący/a się dowodem osobistym
+        nr {{ person.id_number }}, niniejszym wyrażam zgodę na przetwarzanie moich danych
+        osobowych przez {{ company.name }} w celu {{ consent.purpose }}.
+    </p>
+    <p>
+        Zostałem/am poinformowany/a o prawie dostępu do moich danych, ich poprawiania
+        oraz żądania usunięcia.
+    </p>
+
+    <div style="margin-top: 50px;">
+        <div style="float: right; width: 45%; text-align: center;">
+            <p>_________________________</p>
+            <p>(Podpis)</p>
+        </div>
+    </div>
+</body>
+</html>

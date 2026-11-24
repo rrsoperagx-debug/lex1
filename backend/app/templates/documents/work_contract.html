@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Umowa o Pracę</title>
+    <style>
+        body { font-family: DejaVu Sans, sans-serif; font-size: 10pt; }
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>UMOWA O PRACĘ</h1>
+    <p>zawarta na czas {{ contract_duration }}</p>
+
+    <p>
+        pomiędzy:<br>
+        <strong>Pracodawcą:</strong> {{ employer.name }}, z siedzibą w {{ employer.address }}, NIP: {{ employer.nip }}<br>
+        a<br>
+        <strong>Pracownikiem:</strong> {{ employee.name }}, zamieszkałym/ą w {{ employee.address }}, PESEL: {{ employee.pesel }}
+    </p>
+
+    <h2>§ 1. Rodzaj pracy</h2>
+    <p>Pracodawca zatrudnia Pracownika na stanowisku: <strong>{{ position.name }}</strong>.</p>
+    <p>Zakres obowiązków stanowi załącznik nr 1 do niniejszej umowy.</p>
+
+    <h2>§ 2. Wynagrodzenie</h2>
+    <p>
+        Pracownik będzie otrzymywał wynagrodzenie w wysokości <strong>{{ salary.gross_amount }} PLN</strong> brutto
+        (słownie: {{ salary.gross_amount_words }}) miesięcznie.
+    </p>
+
+    <h2>§ 3. Czas pracy</h2>
+    <p>Wymiar czasu pracy wynosi {{ work_hours.dimension }} etatu.</p>
+
+    <div style="margin-top: 50px;">
+        <div style="float: left; width: 45%; text-align: center;">
+            <p>_________________________</p>
+            <p>(Pracodawca)</p>
+        </div>
+        <div style="float: right; width: 45%; text-align: center;">
+            <p>_________________________</p>
+            <p>(Pracownik)</p>
+        </div>
+    </div>
+</body>
+</html>

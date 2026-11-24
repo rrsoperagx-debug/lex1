@@ -1,0 +1,119 @@
+# =============================================================================
+# LexPortal - Konfiguracja Orkiestracji Kontenerów Docker
+# =============================================================================
+#
+# Ten plik definiuje i zarządza wielokontenerową aplikacją LexPortal.
+# Każda usługa (backend, frontend, baza danych, Redis) działa w osobnym
+# kontenerze, co zapewnia izolację i łatwość zarządzania.
+#
+# Główne komendy:
+#   - Uruchomienie w tle:      docker-compose up -d
+#   - Zatrzymanie:              docker-compose down
+#   - Przebudowanie i restart:  docker-compose up -d --build
+#   - Logi konkretnej usługi:   docker-compose logs -f <nazwa_uslugi>
+#
+# =============================================================================
+
+
+
+services:
+  # ---------------------------------------------------------------------------
+  # Usługa Bazy Danych (PostgreSQL)
+  # ---------------------------------------------------------------------------
+  # Przechowuje wszystkie dane aplikacji: użytkowników, sprawy, płatności itp.
+  # Dane są trwale zapisywane w wolumenie 'postgres_data'.
+  # ---------------------------------------------------------------------------
+  db:
+    image: postgres:15-alpine
+    container_name: legal_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # ---------------------------------------------------------------------------
+  # Usługa Pamięci Podręcznej (Redis)
+  # ---------------------------------------------------------------------------
+  # Wykorzystywana jako szybka baza klucz-wartość, m.in. do:
+  #   - Ochrony przed atakami DDoS (śledzenie liczby żądań).
+  #   - Zarządzania zadaniami w tle i kolejkami.
+  # ---------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: legal_redis
+    restart: always
+    # Ważne dla Twojego DDoS Middleware - persistence
+    command: redis-server --appendonly yes
+
+  # ---------------------------------------------------------------------------
+  # Usługa Backendu (FastAPI)
+  # ---------------------------------------------------------------------------
+  # Serce aplikacji – API obsługujące logikę biznesową, autoryzację,
+  # integracje (np. z Mollie) i komunikację z bazą danych.
+  # ---------------------------------------------------------------------------
+  backend:
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+    container_name: legal_backend
+    restart: always
+    depends_on:
+      - db
+      - redis
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_HOST: ${POSTGRES_HOST:-db}
+      DATABASE_URL: ${DATABASE_URL:-}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      SECRET_KEY: ${SECRET_KEY}
+      # Mollie – klucz API i publiczny URL (ngrok lub domena produkcyjna)
+      MOLLIE_API_KEY: ${MOLLIE_API_KEY}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      APP_BASE_URL: ${APP_BASE_URL}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+
+  # ---------------------------------------------------------------------------
+  # Usługa Frontendu (React + Nginx)
+  # ---------------------------------------------------------------------------
+  # Interfejs użytkownika zbudowany w React i serwowany przez Nginx.
+  # Nginx działa jako serwer proxy, przekierowując zapytania /api/*
+  # do backendu.
+  # ---------------------------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: frontend.dockerfile
+    container_name: legal_frontend
+    restart: always
+    depends_on:
+      - backend
+    environment:
+      # Używane przez nginx.conf.template do proxy_pass i CSP connect-src
+      BACKEND_URL: http://backend:8000
+      PORT: 80
+    ports:
+      - "80:80"
+
+  # ---------------------------------------------------------------------------
+  # Usługa Testów E2E (Playwright)
+  # ---------------------------------------------------------------------------
+  # Scenariusze testowe weryfikujące poprawność działania całego sytemu.
+  # ---------------------------------------------------------------------------
+
+
+# =============================================================================
+# Wolumeny
+# =============================================================================
+# Definiuje nazwany wolumen 'postgres_data', który zapewnia trwałość
+# danych bazy PostgreSQL nawet po usunięciu kontenera 'db'.
+# =============================================================================
+volumes:
+  postgres_data:
